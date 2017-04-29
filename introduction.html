@@ -109,21 +109,27 @@
             <div style="width: 100%; height: 120px; color: white">
                 <h2 style="color: white;">PREREQUISITES</h2>
             </div>
-            <div style="width: 100%; height: 80px; text-align: left; color: white">
+            <div style="width: 100%; height: 60px; text-align: left; color: white">
                 The following requirements should be downloaded:<br/>
             </div>
             <div style="width: 100%; height: 380px; text-align: left; color: white">
                 <ul>
-                    <li>Docker for Mac / Linux (v1.13)</li>
-                    <li><a href="https://drive.google.com/open?id=0B9WSViV5BZ4aVXV5U3F4LVVmWVk" style="color: red" target="_blank"><b>OpenShift CLI (oc-v1.5.0-alpha)</b></a></li>
-                    <li>Latest VirtualBox (Mac only)</li>
-                    <li>Ansible playbook</li>
+                    <li>Base needs:</li>
                     <ul>
-                        <li><a href="http://docs.ansible.com/ansible/intro_installation.html#installing-the-control-machine" style="color: red" target="_blank"><b>Install instructions for Linux</b></a></li>
-                        <li><a href="http://docs.ansible.com/ansible/intro_installation.html#latest-releases-via-pip" style="color: red" target="_blank"><b>Install instructions for Mac</b></a></li>
+                        <li><a href="https://drive.google.com/open?id=0B9WSViV5BZ4aVXV5U3F4LVVmWVk" style="color: red" target="_blank"><b>Docker</b></a></li>
+                        <li><a href="https://drive.google.com/open?id=0B9WSViV5BZ4aVXV5U3F4LVVmWVk" style="color: red" target="_blank"><b>OpenShift CLI</b></a></li>
+                        <li><a href="https://drive.google.com/open?id=0B9WSViV5BZ4aVXV5U3F4LVVmWVk" style="color: red" target="_blank"><b>VirtualBox (Mac / Windows)</b></a></li>
+                        <li>Ansible playbook tooling:</li>
+                        <ul>
+                            <li><a href="http://docs.ansible.com/ansible/intro_installation.html#installing-the-control-machine" style="color: red" target="_blank"><b>Install instructions for Linux</b></a></li>
+                            <li><a href="http://docs.ansible.com/ansible/intro_installation.html#latest-releases-via-pip" style="color: red" target="_blank"><b>Install instructions for Mac</b></a></li>
+                        </ul>
                     </ul>
-                    <li><a href="http://github.com/redhatdemocentral/ocp-install-demo" style="color: red" target="_blank"><b>OpenShift Container Platform Install Demo</b></a></li>
-                    <li><a href="http://github.com/redhatdemocentral/rhcs-destinasia-rules-demo" style="color: red" target="_blank"><b>Destinasia Travel Rules Demo</b></a></li>
+                    <li>AppDev in the Cloud:</li>
+                    <ul>
+                        <li><a href="http://github.com/redhatdemocentral/ocp-install-demo" style="color: red" target="_blank"><b>OpenShift Container Platform Install Demo</b></a></li>
+                        <li><a href="http://github.com/redhatdemocentral/rhcs-destinasia-rules-demo" style="color: red" target="_blank"><b>Destinasia Travel Rules Demo</b></a></li>
+                    </ul>
                 </ul>
             </div>
         </section>
@@ -134,8 +140,24 @@
                 <h4 style="color: white">OPENSHIFT CONTAINER PLATFORM IN MINUTES</h4>
             </div>
             <div style="width: 100%; height: 380px; text-align: left; color: white">
+                <ol>
+                    <li>Download <a href="https://github.com/redhatdemocentral/ocp-install-demo/archive/master.zip" style="color: red" target="_blank"><b>ocp-install-demo</b></a> project and unzip</li>
+                    <li>Run init.sh or init.bat</li>
+                    <li>Enjoy next few minutes before logging in</li>
+                </ol>
+                <div style="width: 60%; height: 300px;" align="right">
+                    <img width="100%" height="100%" align="right" src="images/introduction/image03.png">
+                </div>
+            </div>
+        </section>
+
+        <section data-background="images/introduction/image03.png" data-background-size="cover" data-background-position="bottom">
+            <div style="width: 100%; height: 600px; color: red">
+                Log in to your new Cloud:<br><br>
                 <ul>
-                    <li>TODO...</li>
+                    <li><a href="http://192.168.99.100:8443" style="color: red" target="_blank"><b>http://192.168.99.100:8443</b></a></li>
+                    <li style="color: red">User: <b><i>openshift-dev</i></b></li>
+                    <li style="color: red">Password: <b><i>devel</i></b></li>
                 </ul>
             </div>
         </section>
@@ -147,8 +169,32 @@
             </div>
             <div style="width: 100%; height: 380px; text-align: left; color: white">
                 <ul>
-                    <li>TODO...</li>
+                    <li>Download <a href="https://github.com/redhatdemocentral/rhcs-destinasia-rules-demo/archive/master.zip" style="color: red" target="_blank"><b>rhcs-destinasia-rules-demo</b></a> project and unzip</li>
+                    <li>Download <a href="https://developers.redhat.com/download-manager/file/jboss-eap-7.0.0-installer.jar" style="color: red" target="_blank"><b>JBoss EAP 7.0.0</b></a> and <a href="https://developers.redhat.com/download-manager/content/origin/files/sha256/14/148eb9be40833d5da00bb6108cbed1852924135d25ceb6c601c62ba43f99f372/jboss-brms-6.4.0.GA-deployable-eap7.x.zip" style="color: red" target="_blank"><b>JBoss BRMS 6.4.0</b></a></li>
+                    <ul>
+                        <li>Add to <i>installs</i> directory</li>
+                    </ul>
+                    <li>Run init.sh or init.bat, point it at OCP installation:</li>
+                    <ul>
+                        <li><b><i>$ init.sh 192.168.99.100</i></b></li>
+                    </ul>
+                    <li>Enjoy the break before logging in:</li>
+                    <ul>
+                        <li><a href="http://apac-destinasia-rules-demo.192.168.99.100.xip.io/business-central" style="color: red" target="_blank"><b>http://apac-destinasia-rules-demo.192.168.99.100.xip.io/business-central
+                        </b></a></li>
+                        <li>User: <b><i>erics</i></b></li>
+                        <li>Password: <b><i>jbossbrms1!</i></b></li>
+                    </ul>
                 </ul>
+            </div>
+        </section>
+
+        <section data-background="images/rh-images/rh-bg-light.png" data-background-size="100%" data-background-position="center">
+            <div style="width: 980px; height: 80px; color: white">
+                <h4 style="color: red"><b>Decision Table: <i>HERTZ</i> car discount is <i>15</i></b></h4>
+            </div>
+            <div style="width: 980px; height: 400px;">
+                <img width="100%" height="100%" src="images/introduction/image04.png">
             </div>
         </section>
 
@@ -158,42 +204,118 @@
                 <h4 style="color: white">DEPLOYMENTS WITH PLAYBOOKS</h4>
             </div>
             <div style="width: 100%; height: 380px; text-align: left; color: white">
+                Playbooks to deploy:<br><br>
+                <ol>
+                    <li>Destinasia Travel Rules from container to xPaaS Decision Server for discount service</li>
+                    <li>.Net project to ASPNET for car service</li>
+                    <li>JEE project to xPaaS EAP Server for flight service</li>
+                    <li>PHP project to PHP for hotel service</li>
+                    <li>Fuse project to xPaaS Integration Server for integration service</li>
+                </ol>
+            </div>
+        </section>
+
+        <section data-background="images/rh-images/rh-bg-light.png" data-background-size="100%" data-background-position="center">
+            <div style="width: 980px; height: 120px; color: white">
+                <h2 style="color: white;">ARCHITECTURE</h2>
+                <h4 style="color: white">DESTINASIA SERVICES</h4>
+            </div>
+            <div style="width: 980px; height: 600px;">
+                <img width="100%" height="100%" src="images/introduction/image02.png">
+            </div>
+        </section>
+
+        <section data-background="images/rh-images/rh-bg-light.png" data-background-size="100%" data-background-position="center">
+            <div style="width: 980px; height: 120px; color: white">
+                <h2 style="color: white;">PLAYBOOKS</h2>
+                <h4 style="color: white">IN SUPPORT DIRECTORY</h4>
+            </div>
+            <div style="width: 980px; height: 600px;">
+                <img width="100%" height="100%" src="images/introduction/image05.png">
+            </div>
+        </section>
+
+        <section data-background="images/rh-images/rh-bg-light.png" data-background-size="100%" data-background-position="center">
+            <div style="width: 980px; height: 120px; color: white">
+                <h2 style="color: white;">ANSIBLE IN ACTION</h2>
+                <h4 style="color: white">BUILDING SERVICES</h4>
+            </div>
+            <div style="width: 100%; height: 600px;">
+                <img width="100%" height="70%" src="images/introduction/image06.png"><img width="40%" height="20%" src="images/introduction/image07.png">
+            </div>
+        </section>
+
+        <section data-background="images/rh-images/rh-bg-light.png" data-background-size="100%" data-background-position="center">
+            <div style="width: 980px; height: 120px; color: white">
+                <h2 style="color: white;">ANSIBLE IN ACTION</h2>
+                <h4 style="color: white">DEPLOYING SERVICES</h4>
+            </div>
+            <div style="width: 100%; height: 600px;">
+                <img width="100%" height="70%" src="images/introduction/image08.png">
+            </div>
+        </section>
+
+        <section data-background="images/rh-images/rh-bg-light.png" data-background-size="100%" data-background-position="center">
+            <div style="width: 980px; height: 120px; color: white">
+                <h2 style="color: white;">ANSIBLE IN ACTION</h2>
+                <h4 style="color: white">SERVICES FINAL BUILDS</h4>
+            </div>
+            <div style="width: 100%; height: 600px;">
+                <img width="100%" height="70%" src="images/introduction/image09.png"><img width="40%" height="20%" src="images/introduction/image10.png">
+            </div>
+        </section>
+
+        <section data-background="images/rh-images/rh-bg-light.png" data-background-size="100%" data-background-position="center">
+            <div style="width: 980px; height: 100px; color: white">
+                <h3 style="color: white;">ANSIBLE SERVICES DEPLOYED</h3>
+            </div>
+            <div style="width: 100%; height: 600px;">
+                <img width="100%" height="100%" src="images/introduction/image11.png">
+            </div>
+        </section>
+
+        <section data-background="images/rh-images/rh-bg-light.png" data-background-size="100%" data-background-position="center">
+            <div style="width: 100%; height: 570px;">
+                <h4 style="color: white">Remember the <i>HERTZ</i> car discount?</h4>
+                <img width="85%" height="85%" src="images/introduction/image12.png">
+            </div>
+            <div style="width: 980px; height: 100px; color: white" align="left">
                 <ul>
-                    <li>TODO...</li>
+                    <li>Change <i><b>HERTZ</b></i> in <i><b>carRentalCo</b></i> field<br></li>
+                    <li>Verify xPaaS discount rule changes <i><b>carDisc</b></i> from <i><b>15 to 0</b></i></li>
                 </ul>
             </div>
         </section>
 
         <section data-background="images/rh-images/rh-bg-light.png" data-background-size="cover" data-background-position="bottom">
-            <div style="width: 100%; height: 180px; color: white">
-                <h2 style="color: white;">TESTING SERVICES</h2>
-                <h4 style="color: white">REST CLIENT USES INTEGRATION ENDPOINT</h4>
-            </div>
-            <div style="width: 100%; height: 380px; text-align: left; color: white">
-                <ul>
-                    <li>TODO...</li>
-                </ul>
-            </div>
-        </section>
-
-        <section data-background="images/rh-images/rh-bg-light.png" data-background-size="cover" data-background-position="bottom">
-            <div style="width: 100%; height: 180px; color: white">
+            <div style="width: 100%; height: 130px; color: white">
                 <h2 style="color: white;">WHAT'S NEXT...</h2>
                 <h4 style="color: white">RED HAT DEMO CENTRAL COLLECTION</h4>
             </div>
-            <div style="width: 100%; height: 380px; text-align: left; color: white">
-                <ul>
-                    <li>TODO...</li>
-                </ul>
+            <div style="width: 100%; height: 580px; text-align: left; color: white">
+                <img width="100%" height="100%" src="images/introduction/image13.png">
             </div>
         </section>
 
-
-        <section data-background="images/rh-images/rh-bg-light.png" data-background-size="cover" data-background-position="bottom">
-            <h2 style="color: white">Let's get started...</h2>
-            <!-- <h3><a href="index.html#/3" style="color: red" target="_blank">Destinasia Travel Agency Workshop</a></h3> -->
-            <h3 style="color: white">Destinasia Travel Agency Workshop</h3>
+        <section data-background="images/rh-images/rh-bg-start.png" data-background-size="cover" data-background-position="bottom">
+            <div style="width: 1056px; height: 200px; color: white">
+                <h2 style="color: white;">THANK YOU</h2>
+            </div>
+            <div style="width: 600px; height: 100px; text-align: left; color: white">
+                Eric D. Schabell<br/>
+                Global Technology Evangelist Director<br/>
+                <a href="http://twitter.com/ericschabell" style="color: red" target="_blank">@ericschabell</a><br/>
+                <a href="http://schabell.org" style="color: red">http://schabell.org</a>
+            </div>
         </section>
+
+        <!--
+        <section data-background="images/rh-images/rh-bg-light.png" data-background-size="cover" data-background-position="bottom">
+            <h2 style="color: white">DETAILED WORKSHOP</h2>
+            <h3><a href="index.html#/3" style="color: red" target="_blank">Destinasia Travel Agency Workshop</a></h3>
+            <h3 style="color: white">DESTINASIA TRAVEL AGENCY (coming soon...)</h3>
+        </section>
+        -->
     </div>
 </div>
 
