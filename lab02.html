@@ -70,13 +70,162 @@
             </div>
         </section>
 
-
-
-
+        <section>
+            <div style="width: 1056px; height: 130px;">
+                <h2>INSTALL JBOSS BRMS</h2>
+            </div>
+            <div style="width: 1056px; height: 500px;">
+                <ul>
+                    <li>Download <a href="https://github.com/redhatdemocentral/rhcs-destinasia-rules-demo/archive/master.zip" style="color: red" target="_blank">rhcs-destinasia-rules-demo</a> and unzip</li>
+                    <ul>
+                        <li><code>$ unzip rhcs-destinasia-rules-demo-master.zip</code></li>
+                        <li><code>$ cd rhcs-destinasia-rules-demo-master</code></li>
+                    </ul>
+                    <li>Download <a href ="https://developers.redhat.com/download-manager/file/jboss-eap-7.0.0-installer.jar" style="color: red" target="_blank">JBoss EAP</a>  and place in installs directory:</li>
+                    <ul>
+                        <li><code>$ copy [path-to-download]/jboss-eap-7.0.0-installer.jar installs/jboss-eap-7.0.0-installer.jar</code></li>
+                    </ul>
+                    <li>Download <a href ="https://developers.redhat.com/download-manager/content/origin/files/sha256/14/148eb9be40833d5da00bb6108cbed1852924135d25ceb6c601c62ba43f99f372/jboss-brms-6.4.0.GA-deployable-eap7.x.zip" style="color: red" target="_blank">JBoss BRMS</a>  and place in installs directory:</li>
+                    <ul>
+                        <li><code>$ copy [path-to-download]/jboss-brms-6.4.0.GA-deployable-eap7.x.zip installs/jboss-brms-6.4.0.GA-deployable-eap7.x.zip</code></li>
+                    </ul>
+                </ul>
+            </div>
+        </section>
 
         <section>
-            <h2>JBoss BRMS Workshop</h2>
-            <h3><a href="lab03.html" style="color: red" target="_blank">Lab 03 - Create domain model</a></h3>
+            <div style="width: 1056px; height: 130px;">
+                <h2>INSTALL JBOSS BRMS</h2>
+            </div>
+            <div style="width: 1056px; height: 500px;">
+                <ul>
+                    <li>Run init.sh or init.bat (Windows admin privileges) pointing to OCP installation:</li>
+                    <ul>
+                        <li><code>$ ./init.{sh|bat} 192.168.99.100</code></li>
+                    </ul>
+                    <li>The IP used here is address OpenShift Container Platform</li>
+                    <img width="50%" height="50%" src="images/destinasia-workshop/image15.png" align="right">
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 120px;">
+                <h2>PROJECT SETUP</h2>
+                <h5>Checks first, then setup...</h5>
+            </div>
+            <div style="width: 1056px; height: 600px;">
+                <img src="images/destinasia-workshop/image16.png">
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 120px;">
+                <h2>VIEW OCP PROJECT</h2>
+                <h5>Log in to view AppDev in Cloud...</h5>
+            </div>
+            <div style="width: 1056px; height: 600px;">
+                <img src="images/destinasia-workshop/image17.png">
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 120px;">
+                <h2>UPLOAD PROJECT</h2>
+                <h5>Takes some time...</h5>
+            </div>
+            <div style="width: 1056px; height: 600px;">
+                <img src="images/destinasia-workshop/image18.png">
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 120px;">
+                <h2>VIEW OCP BUILD</h2>
+                <h5>Click on Monitoring, open destinasia-rules-demo build...</h5>
+            </div>
+            <div style="width: 1056px; height: 600px;">
+                <img src="images/destinasia-workshop/image19.png">
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 120px;">
+                <h2>BUILD CONTAINER</h2>
+                <h5>Console shows same build log as in OCP console...</h5>
+            </div>
+            <div style="width: 1056px; height: 600px;">
+                <img src="images/destinasia-workshop/image20.png">
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 120px;">
+                <h2>DEPLOYS CONTAINER</h2>
+                <h5>After build & deployment, note log in URL ...</h5>
+            </div>
+            <div style="width: 1056px; height: 600px;">
+                <img src="images/destinasia-workshop/image21.png">
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 120px;">
+                <h2>VIEW OCP PROJECT</h2>
+                <h5>Click on Overview to view deployed containers / pods...</h5>
+            </div>
+            <div style="width: 1056px; height: 600px;">
+                <img src="images/destinasia-workshop/image22.png">
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 120px;">
+                <h2>LOG IN TO JBOSS BRMS</h2>
+            </div>
+            <div style="width: 1056px; height: 500px;">
+                <ul>
+                    <li><a href="http://destinasia-rules-demo.192.168.99.100.xip.io/business-central" style="color: red" target="_blank">http://destinasia-rules-demo.192.168.99.100.xip.io/business-central</a></li>
+                    <ul>
+                        <li>user: <code>erics</code></li>
+                        <li>password: <code>jbossbrms1!</code></li>
+                    </ul>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <img src="images/destinasia-workshop/image23.png">
+        </section>
+
+        <section>
+            <img src="images/destinasia-workshop/image24.png">
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 100px;">
+                <h2>END LAB 2</h2>
+            </div>
+            <div style="width: 1056px; height: 500px;">
+                <img style="border: 2px solid black" src="images/destinasia-workshop/image25.png">
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 200px; color: white">
+                <h2>QUESTIONS?</h2>
+            </div>
+            <div style="width: 600px; height: 100px; text-align: left">
+                Eric D. Schabell<br/>
+                Global Technology Evangelist Director<br/>
+                <a href="http://twitter.com/ericschabell" style="color: red" target="_blank">@ericschabell</a><br/>
+                <a href="http://schabell.org" style="color: red">http://schabell.org</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>Up Next...</h2>
+            <h3><a href="lab03.html" style="color: red" target="_blank">Lab 03 - Discount travel rules</a></h3>
         </section>
     </div>
 </div>

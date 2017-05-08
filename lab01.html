@@ -104,14 +104,14 @@
             </div>
             <div style="width: 1056px; height: 500px;">
                 <ul>
-                    <li>Download <a href="https://github.com/redhatdemocentral/ocp-install-demo/archive/master.zip" style="color: red" target="_blank">ocp-install-demo</a> and unzip.</li>
-                    <li>Run init.sh or init.bat</li>
+                    <li>Download <a href="https://github.com/redhatdemocentral/ocp-install-demo/archive/master.zip" style="color: red" target="_blank">ocp-install-demo</a> and unzip</li>
+                    <li>Run init.sh or init.bat (Windows admin privileges)</li>
                     <ul>
                         <li><code>$ unzip ocp-install-demo-master.zip</code></li>
                         <li><code>$ cd ocp-install-demo-master</code></li>
-                        <li><code>$ ./init.sh</code></li>
+                        <li><code>$ ./init.{sh|bat}</code></li>
                     </ul>
-                    <li>See next slides for dealing with any issues.</li>
+                    <li>See next slides for dealing with any issues</li>
                     <img width="30%" height="30%" src="images/destinasia-workshop/image02.png" align="right">
                 </ul>
             </div>
@@ -239,7 +239,7 @@
                 <ul>
                     <li><i><code>OpenShift command line tools installed... checking for valid version...</code></i></li>
                     <li>Version of installed OpenShift command line tools is vX.X.X, must be v3.4.1 or higher...
-                        Download for Mac/Linux here:
+                        Download for Mac/Linux/Windows here:
                         <a href="https://drive.google.com/open?id=0B9WSViV5BZ4aVXV5U3F4LVVmWVk" style="color: red"
                            target="_blank">https://drive.google.com/open?id=0B9WSViV5BZ4aVXV5U3F4LVVmWVk</a></code></i></li>
                 </ul>
@@ -324,14 +324,18 @@
         </section>
 
         <section>
-            <h2>Log in to OCP</h2>
-            <ul>
-                <li><a href="http://192.168.99.100:8443" style="color: red" target="_blank">http://192.168.99.100:8443</a></li>
+            <div style="width: 1056px; height: 120px;">
+                <h2>LOG IN TO OCP</h2>
+            </div>
+            <div style="width: 1056px; height: 500px;">
                 <ul>
-                    <li>user: <code>openshift-dev</code></li>
-                    <li>password: <code>devel</code></li>
+                    <li><a href="http://192.168.99.100:8443" style="color: red" target="_blank">http://192.168.99.100:8443</a></li>
+                    <ul>
+                        <li>user: <code>openshift-dev</code></li>
+                        <li>password: <code>devel</code></li>
+                    </ul>
                 </ul>
-            </ul>
+            </div>
         </section>
 
         <section>
