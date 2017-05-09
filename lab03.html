@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Exploring Destinasia discount rules</title>
+
+    <meta name="description" content="Exploring discount travel rules project">
+    <meta name="author" content="Eric D. Schabell">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/serif.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if (window.location.search.match(/print-pdf/gi)) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'css/print/pdf.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+        <section>
+            <div style="width: 1056px; height: 130px;">
+                <h2>Lab 3</h2>
+                <h4>Exploring travel discount rules project</h4>
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 130px;">
+                <h2>Lab Goal</h2>
+                <h4>To explore JBoss BRMS project with travel discount rules and rule tests to understand how they work.</h4>
+            </div>
+            <div style="width: 1056px; height: 600px;">
+                <img src="images/destinasia-workshop/image01.png">
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 130px;">
+                <h2>ARCHITECTURE</h2>
+                <h4>Deploy travel discount rules on OpenShift Container Platform</h4>
+            </div>
+            <div style="width: 1056px; height: 600px;">
+                <img src="images/destinasia-workshop/image14.png">
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 130px;">
+                <h2>VIEW PROJECT</h2>
+            </div>
+            <div style="width: 1056px; height: 500px;">
+                <ul>
+                    <li>Open project by clicking on menu entry <i>Authoring -> Project Authoring:</i></li>
+                </ul>
+                <img src="images/destinasia-workshop/image26.png" align="right">
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 120px;">
+                <h2>DECISION TABLE</h2>
+                <h5>Project opens with dicount rules in decision table</h5>
+            </div>
+            <div style="width: 1056px; height: 600px;">
+                <img src="images/destinasia-workshop/image27.png">
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 130px;">
+                <h2>DISCOUNT RULES</h2>
+            </div>
+            <div style="width: 1056px; height: 500px;">
+                <ul>
+                    <li>Table has rules for Flights, Cars and Hotels:</li>
+                    <ul>
+                        <li>Flights: for diverse asian airport codes gets 10 discount</li>
+                        <li>Cars: for Hertz car rental company gets 15 discount</li>
+                        <li>Hotel: for lenght of stay six or more days gets 10 discount</li>
+                    </ul>
+                    <img src="images/destinasia-workshop/image28.png" align="right">
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 160px;">
+                <h2>RULES TEST</h2>
+                <h5>Open the <i>TEST SCENARIOS</i> tab on right in <i>Project Explorer</i> and click on <i>TestDiscountRules</i> to open...</h5>
+            </div>
+            <div style="width: 1056px; height: 600px;">
+                <img src="images/destinasia-workshop/image29.png">
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 100px;">
+                <h2>TEST OVERVIEW</h2>
+            </div>
+            <div style="width: 1056px; height: 600px;">
+                <img src="images/destinasia-workshop/image30.png">
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 120px;">
+                <h2>TEST RUN FAILS</h2>
+                <h5>Click on <i>Run scenario</i> button top righ to see test fail...</h5>
+            </div>
+            <div style="width: 1056px; height: 600px;">
+                <img src="images/destinasia-workshop/image31.png">
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 120px;">
+                <h2>FIX RULE TEST</h2>
+            </div>
+            <div style="width: 1056px; height: 600px;">
+                <ul>
+                    <li>Note red failure, look where it failed and fix</li>
+                    <li><i>Flight Destination (flightTo)</i> change to <i>SIN</i> for Singapore</li>
+                    <li>Click on <i>Save</i> button to enter commit message and rerun test</li>
+                </ul>
+                <img src="images/destinasia-workshop/image32.png" align="right">
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 120px;">
+                <h2>TEST RUN SUCCESS</h2>
+            </div>
+            <div style="width: 1056px; height: 600px;">
+                <img src="images/destinasia-workshop/image33.png">
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 150px;">
+                <h2>WHAT'S NEXT?</h2>
+                <h5>Infrastructure automation to deploy applications...</h5>
+            </div>
+            <div style="width: 1056px; height: 500px;">
+                <ul>
+                    <li>You understand the discount rules and have tested them</li>
+                    <li>Going to use Ansible Playbooks to automoate container deployments</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <img src="images/destinasia-workshop/image23.png">
+        </section>
+
+        <section>
+            <img src="images/destinasia-workshop/image24.png">
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 100px;">
+                <h2>END LAB 3</h2>
+            </div>
+            <div style="width: 1056px; height: 500px;">
+                <img style="border: 2px solid black" src="images/destinasia-workshop/image25.png">
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 200px; color: white">
+                <h2>QUESTIONS?</h2>
+            </div>
+            <div style="width: 600px; height: 100px; text-align: left">
+                Eric D. Schabell<br/>
+                Global Technology Evangelist Director<br/>
+                <a href="http://twitter.com/ericschabell" style="color: red" target="_blank">@ericschabell</a><br/>
+                <a href="http://schabell.org" style="color: red">http://schabell.org</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>Up Next...</h2>
+            <h3><a href="lab04.html" style="color: red" target="_blank">Lab 04</a></h3>
+            <h3><a href="lab04.html" style="color: red" target="_blank">Automated rule service deployment</a></h3>
+        </section>
+    </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+
+<script>
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [{
+            src: 'lib/js/classList.js',
+            condition: function() {
+                return !document.body.classList;
+            }
+        }, {
+            src: 'plugin/markdown/marked.js',
+            condition: function() {
+                return !!document.querySelector('[data-markdown]');
+            }
+        }, {
+            src: 'plugin/markdown/markdown.js',
+            condition: function() {
+                return !!document.querySelector('[data-markdown]');
+            }
+        }, {
+            src: 'plugin/highlight/highlight.js',
+            async: true,
+            callback: function() {
+                hljs.initHighlightingOnLoad();
+            }
+        }, {
+            src: 'plugin/zoom-js/zoom.js',
+            async: true,
+            condition: function() {
+                return !!document.body.classList;
+            }
+        }, {
+            src: 'plugin/notes/notes.js',
+            async: true,
+            condition: function() {
+                return !!document.body.classList;
+            }
+        }]
+    });
+</script>
+
+</body>
+
+</html>
