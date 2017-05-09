@@ -70,28 +70,164 @@
             </div>
         </section>
 
-
-
-
-
-
-
-
-
         <section>
-            <img src="images/destinasia-workshop/image??.png">
+            <div style="width: 1056px; height: 170px;">
+                <h2>WHERE ARE PLAYBOOKS?</h2>
+            </div>
+            <div style="width: 1056px; height: 400px;">
+                <ul>
+                    <li>The travel backend services are deployed using <i>Ansible playbooks</i></li>
+                    <li>They are found here:</li>
+                    <br>
+                    <ul>
+                        <li><p style="font-size: 24px"><code>$ cd support/playbooks/deploy-ocp-services</code></p></li>
+                    </ul>
+                    <br>
+                    <li>Start with the discount rules service:</li>
+                </ul>
+                <br><br>
+                <img src="images/destinasia-workshop/image36.png" align="right">
+            </div>
         </section>
 
         <section>
-            <img src="images/destinasia-workshop/image??.png">
+            <div style="width: 1056px; height: 120px;">
+                <h2>PLAYBOOK START</h2>
+            </div>
+            <div style="width: 1056px; height: 180px;">
+                <ul>
+                    <li>The rule service playbook stars with messages, setup and loging in to the
+                        OpenShift Container Platform:</li>
+                    <br>
+                    <ul>
+                        <li><p style="font-size: 24px"><code>$ ./ansible-playbook-ruleservice.sh</code></p></li>
+                    </ul>
+                </ul>
+            </div>
+            <div style="width: 1156px; height: 500px;">
+                <img src="images/destinasia-workshop/image42.png">
+            </div>
         </section>
 
         <section>
-            <div style="width: 1056px; height: 100px;">
-                <h2>END LAB 4</h2>
+            <div style="width: 1056px; height: 120px;">
+                <h2>PLAYBOOK LOOKUP</h2>
+            </div>
+            <div style="width: 1056px; height: 150px;">
+                <ul>
+                    <li>The rule service playbook looks up the JBOss BRMS containers internal IP in preparation for
+                        extracting the discount rules project:</li>
+                    <br>
+                </ul>
+            </div>
+            <div style="width: 1156px; height: 600px;">
+                <img src="images/destinasia-workshop/image43.png">
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 120px;">
+                <h2>PLAYBOOK DEPLOYMENT</h2>
+            </div>
+            <div style="width: 1056px; height: 150px;">
+                <ul>
+                    <li>The rule service playbook finally deploys a new container, <i>xPaaS Decision Service</i>
+                        with the dicount rules extracted previously and reports playbook status as it finishes:</li>
+                    <br>
+                </ul>
+            </div>
+            <div style="width: 1056px; height: 600px;">
+                <img src="images/destinasia-workshop/image44.png">
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 150px;">
+                <h2>IF BUILD FAILS</h2>
+            </div>
+            <div style="width: 1056px; height: 400px;">
+                <ul>
+                    <li>Look in OCP console at <i>Monitoring</i> for <i>Builds</i></li>
+                    <li>The playbook build can fail if JBoss BRMS container's not ready</li>
+                    <li>It fails trying to fetch the rules project:</li>
+                    <br>
+                </ul>
+                <img src="images/destinasia-workshop/image37.png" align="right">
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 120px;">
+                <h2>HOW TO FIX</h2>
+            </div>
+            <div style="width: 1056px; height: 550px;">
+                <ul>
+                    <li>Open <i>Monitoring</i> view, open Destinasia rules deployment container log, notice
+                        it's busy starting up the server still:</li>
+                </ul>
+                <img src="images/destinasia-workshop/image38.png" align="right">
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 120px;">
+                <h2>NOW READY</h2>
+            </div>
+            <div style="width: 1056px; height: 550px;">
+                <ul>
+                    <li>Once the build is finished, the log shows you can now run the playbook (note highlighted line):</li>
+                </ul>
+                <img src="images/destinasia-workshop/image39.png" align="right">
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 150px;">
+                <h2>REBUILD RULE SERVICE</h2>
+            </div>
+            <div style="width: 1056px; height: 550px;">
+                <ul>
+                    <li>It's easiest take the last failed build and click on it to open it's details and click on the
+                        <i>Rebuild</i> button:</li>
+                </ul>
+                <br><br>
+                <img src="images/destinasia-workshop/image40.png" align="right">
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 150px;">
+                <h2>BUILDING RULE SERVICE</h2>
+            </div>
+            <div style="width: 1056px; height: 550px;">
+                <ul>
+                    <li>The build should run without issues now that the container with discount rules is running and
+                        available:</li>
+                </ul>
+                <br><br>
+                <img src="images/destinasia-workshop/image41.png" align="right">
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 150px;">
+                <h2>DEPLOYED RULE SERVICE</h2>
             </div>
             <div style="width: 1056px; height: 500px;">
-                <img style="border: 2px solid black" src="images/destinasia-workshop/image??.png">
+                <ul>
+                    <li>When a build finishes you see a new deployment contianer appears in <i>Monitoring</i>
+                        view under <i>Deployments</i>:</li>
+                </ul>
+                <img src="images/destinasia-workshop/image45.png" align="right">
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 150px;">
+                <h2>END LAB 4</h2>
+            </div>
+            <div style="width: 1056px; height: 700px;" align="left">
+                <img height="50%" width="50%" src="images/destinasia-workshop/image46.png"><img height="50%" width="50%" src="images/destinasia-workshop/image47.png">
             </div>
         </section>
 
