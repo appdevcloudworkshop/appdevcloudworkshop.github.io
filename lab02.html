@@ -78,16 +78,16 @@
                 <ul>
                     <li>Download <a href="https://github.com/redhatdemocentral/rhcs-destinasia-rules-demo/archive/master.zip" style="color: red" target="_blank">rhcs-destinasia-rules-demo</a> and unzip</li>
                     <ul>
-                        <li><code>$ unzip rhcs-destinasia-rules-demo-master.zip</code></li>
-                        <li><code>$ cd rhcs-destinasia-rules-demo-master</code></li>
+                        <li><p style="font-size: 24px"><code>$ unzip rhcs-destinasia-rules-demo-master.zip</code></p></li>
+                        <li><p style="font-size: 24px"><code>$ cd rhcs-destinasia-rules-demo-master</code></p></li>
                     </ul>
                     <li>Download <a href ="https://developers.redhat.com/download-manager/file/jboss-eap-7.0.0-installer.jar" style="color: red" target="_blank">JBoss EAP</a>  and place in installs directory:</li>
                     <ul>
-                        <li><code>$ copy [path-to-download]/jboss-eap-7.0.0-installer.jar installs/jboss-eap-7.0.0-installer.jar</code></li>
+                        <li><p style="font-size: 24px"><code>$ copy [path-to-download]/jboss-eap-7.0.0-installer.jar installs/jboss-eap-7.0.0-installer.jar</code></p></li>
                     </ul>
                     <li>Download <a href ="https://developers.redhat.com/download-manager/content/origin/files/sha256/14/148eb9be40833d5da00bb6108cbed1852924135d25ceb6c601c62ba43f99f372/jboss-brms-6.4.0.GA-deployable-eap7.x.zip" style="color: red" target="_blank">JBoss BRMS</a>  and place in installs directory:</li>
                     <ul>
-                        <li><code>$ copy [path-to-download]/jboss-brms-6.4.0.GA-deployable-eap7.x.zip installs/jboss-brms-6.4.0.GA-deployable-eap7.x.zip</code></li>
+                        <li><p style="font-size: 24px"><code>$ copy [path-to-download]/jboss-brms-6.4.0.GA-deployable-eap7.x.zip installs/jboss-brms-6.4.0.GA-deployable-eap7.x.zip</code></p></li>
                     </ul>
                 </ul>
             </div>
@@ -99,10 +99,12 @@
             </div>
             <div style="width: 1056px; height: 500px;">
                 <ul>
-                    <li>Run init.sh or init.bat (Windows admin privileges) pointing to OCP installation:</li>
+                    <li>Run init.sh or init.bat (Windows admin privileges) with IP of target OpenShift Container Platform:</li>
+                    <br>
                     <ul>
-                        <li><code>$ ./init.{sh|bat} 192.168.99.100</code></li>
+                        <li><p style="font-size: 24px"><code>$ ./init.{sh|bat} 192.168.99.100</code></p></li>
                     </ul>
+                    <br>
                     <li>The IP used here is address OpenShift Container Platform</li>
                     <img width="50%" height="50%" src="images/destinasia-workshop/image15.png" align="right">
                 </ul>
@@ -183,14 +185,25 @@
             <div style="width: 1056px; height: 120px;">
                 <h2>LOG IN TO JBOSS BRMS</h2>
             </div>
-            <div style="width: 1056px; height: 500px;">
+            <div style="width: 1056px; height: 220px;" align="left">
+                <a href="http://destinasia-rules-demo.192.168.99.100.xip.io/business-central" style="color: red" target="_blank">http://destinasia-rules-demo.192.168.99.100.xip.io/business-central</a>
+                <br><br>
                 <ul>
-                    <li><a href="http://destinasia-rules-demo.192.168.99.100.xip.io/business-central" style="color: red" target="_blank">http://destinasia-rules-demo.192.168.99.100.xip.io/business-central</a></li>
-                    <ul>
-                        <li>user: <code>erics</code></li>
-                        <li>password: <code>jbossbrms1!</code></li>
-                    </ul>
+                    <li><p style="font-size: 24px">user: <code>erics</code></p></li>
+                    <li><p style="font-size: 24px">password: <code>jbossbrms1!</code></p></li>
                 </ul>
+            </div>
+            <div style="width: 1256px; height: 250px;" align="left">
+                If unable to open URL, add this to your hosts file:
+                <br><br>
+                <p style="font-size: 24px">
+                <code>
+                    $ sudo vi /etc/hosts
+                    <br><br>
+                    # add host for OCP demo resolution<br>
+                    192.168.99.100   destinasia-rules-demo.192.168.99.100.xip.io
+                </code>
+                </p>
             </div>
         </section>
 
