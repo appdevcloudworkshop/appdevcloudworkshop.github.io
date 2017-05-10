@@ -70,104 +70,170 @@
             </div>
         </section>
 
-
-
-
-
+        <section>
+            <div style="width: 1056px; height: 120px; color: white">
+                <h3>TESTING INTEGRATION</h3>
+            </div>
+            <div style="width: 1056px; height: 400px;">
+                <h5>
+                    You finished the setup of OpenShift Container Platform, then built and deployed the
+                    backend consisting of Hotel, Flights, Cars, Discount Rules and Integration services. The final
+                    check is to make sure the integration endpoint is available and processing the services
+                    correctly.
+                    <br><br>
+                    This requires the use of a REST client, for example in the lab images here, it will be done from
+                    the Firefox browser using a plugin called <i>RESTClient</i>. You may use your own or install the
+                    same one.
+                </h5>
+            </div>
+        </section>
 
         <section>
             <div style="width: 1056px; height: 170px;">
-                <h2>WHERE ARE PLAYBOOKS?</h2>
+                <h2>INTEGRATION ENDPOINT</h2>
             </div>
             <div style="width: 1056px; height: 400px;">
                 <ul>
-                    <li>The travel backend services are deployed using <i>Ansible playbooks</i></li>
-                    <li>They are found here:</li>
+                    <li>The integration endpoint is used to query the Destinasia backend systems only produces
+                    results if it receives a REST query that it expects, but is available here:</li>
                     <br>
                     <ul>
-                        <li><p style="font-size: 24px"><code>$ cd support/playbooks/deploy-ocp-services</code></p></li>
+                        <li><p style="font-size: 24px">
+                            <code><a href="http://fusetravelagency-appdev-in-cloud.192.168.99.100.xip.io/rest/book" style="color: red" target="_blank">
+                            http://fusetravelagency-appdev-in-cloud.192.168.99.100.xip.io/rest/book</a></code></p></li>
                     </ul>
                     <br>
-                    <li>Let's deploy the integration service:</li>
+                    <li>To test the services you can push the payload (request) to this endpoint, which is provided on the next slide.</li>
                 </ul>
-                <br><br>
-                <img src="images/destinasia-workshop/image71.png" align="right">
             </div>
         </section>
 
         <section>
-            <div style="width: 1056px; height: 120px;">
-                <h2>PLAYBOOK START</h2>
+            <div style="width: 1056px; height: 170px;">
+                <h2>INTEGRATION PAYLOAD</h2>
             </div>
-            <div style="width: 1056px; height: 180px;">
+            <div style="width: 1056px; height: 400px;">
                 <ul>
-                    <li>The integration service playbook stars with messages, setup and logging in to the
-                        OpenShift Container Platform:</li>
+                    <li>The payload to be put into your REST client:</li>
                     <br>
                     <ul>
-                        <li><p style="font-size: 24px"><code>$ ./ansible-playbook-fuseservice.sh</code></p></li>
+                        <li><p style="font-size: 24px"><code>Method: POST</code></p></li>
+                        <li><p style="font-size: 24px"><code>Header: Content-Type application/json</code></p></li>
+                        <li><p style="font-size: 24px"><code>URL: http://fusetravelagency-appdev-in-cloud.192.168.99.100.xip.io/rest/book</code></p></li>
+                        <li><p style="font-size: 24px"><code>Body:
+                            {"flightReq":{"flightFrom":"SIN","flightTo":"PEK","flightDate":"03/08/2017","flightPassengers":2,"flightNo":"SIN22"},"hotelReq":{"hotelArrivalDate":"03/08/2017","hotelNights":33,"hotelCity":"PEK","hotelId":"Marriott"},"carReq":{"carCity":"PEK","carRentalCo":"Hertz","carType":"Econ","carStartDate":"03/08/2017","carDays":33}}</code></p></li>
                     </ul>
                 </ul>
-            </div>
-            <div style="width: 1156px; height: 500px;">
-                <img src="images/destinasia-workshop/image72.png">
             </div>
         </section>
 
         <section>
             <div style="width: 1056px; height: 120px;">
-                <h2>PLAYBOOK DEPLOYMENT</h2>
+                <h2>REST CLIENT URL</h2>
             </div>
             <div style="width: 1056px; height: 600px;" align="left">
-                The integration service playbook deploys a container, patches ports, exposes route and reports
-                playbook status as it finishes:
+                Install or use your own REST Client, starting by selecting the <i>Method</i> and <i>URL</i>:
+                <br><br>
+                <ul>
+                    <li><p style="font-size: 24px"><code>Method: POST</code></p></li>
+                    <li><p style="font-size: 24px"><code>URL: http://fusetravelagency-appdev-in-cloud.192.168.99.100.xip.io/rest/book</code></p></li>
+                </ul>
+                <img src="images/destinasia-workshop/image78.png">
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 120px;">
+                <h2>REST CLIENT HEADERS</h2>
+            </div>
+            <div style="width: 1056px; height: 600px;" align="left">
+                Insert this <i>Header</i>:
+                <br><br>
+                <ul>
+                    <li><p style="font-size: 24px"><code>Header: Content-Type application/json</code></p></li>
+                </ul>
                 <br>
-                <img src="images/destinasia-workshop/image73.png">
+                <img height="30%" width="30%" src="images/destinasia-workshop/image79.png">
+                <img src="images/destinasia-workshop/image80.png">
             </div>
         </section>
 
         <section>
             <div style="width: 1056px; height: 120px;">
-                <h2>IF BUILD FAILS</h2>
+                <h2>REST CLIENT BODY</h2>
             </div>
-            <div style="width: 1056px; height: 550px;">
+            <div style="width: 1056px; height: 600px;" align="left">
+                Insert this <i>Body</i>, ensure there are no line feed (returns):
+                <br><br>
                 <ul>
-                    <li>The playbook can fail if any of the other four services are not deployed</li>
-                    <li>It can also fail due to networking issues, causing maven dependencies failures</li>
-                    <li>To determine cause, see the error message in the build log:</li>
+                    <li><p style="font-size: 24px"><code>Body:{"flightReq":{"flightFrom":"SIN","flightTo":"PEK","flightDate":"03/08/2017","flightPassengers":2,"flightNo":"SIN22"},"hotelReq":{"hotelArrivalDate":"03/08/2017","hotelNights":33,"hotelCity":"PEK","hotelId":"Marriott"},"carReq":{"carCity":"PEK","carRentalCo":"Hertz","carType":"Econ","carStartDate":"03/08/2017","carDays":33}}</code></p></li>
                 </ul>
-                <img src="images/destinasia-workshop/image74.png" align="right">
-            </div>
-        </section>
-
-        <section>
-            <div style="width: 1056px; height: 150px;">
-                <h2>HOW TO FIX</h2>
-            </div>
-            <div style="width: 1056px; height: 550px;" align="left">
-                Fix networking issues or install missing services before trying to rebuild integration service.
+                <br>
+                <img src="images/destinasia-workshop/image81.png">
             </div>
         </section>
 
         <section>
             <div style="width: 1056px; height: 120px;">
-                <h2>INTEGRATION SERVICE</h2>
+                <h2>REST CLIENT RESULTS</h2>
             </div>
-            <div style="width: 1056px; height: 500px;">
-                <ul>
-                    <li>When a build finishes you see a new deployment container appears in <i>Monitoring</i>
-                        view under <i>Deployments</i>:</li>
-                </ul>
-                <img src="images/destinasia-workshop/image75.png" align="right">
+            <div style="width: 1056px; height: 500px;" align="left">
+                Submit the request via the <i>Save</i> button and examine the <i>Response Body</i>:
+                <br>
+                <img src="images/destinasia-workshop/image82.png">
+                <br>
+                Flight, hotel and car backend services are working. Next up, testing discount rules by changing
+                the car information.
             </div>
         </section>
 
         <section>
-            <div style="width: 1056px; height: 150px;">
-                <h2>END LAB 8</h2>
+            <div style="width: 1056px; height: 120px;">
+                <h2>REST CLIENT DISCOUNTS</h2>
             </div>
-            <div style="width: 1056px; height: 700px;" align="left">
-                <img src="images/destinasia-workshop/image76.png">
+            <div style="width: 1056px; height: 600px;" align="left">
+                In the <i>Body</i>, modify the <i>carRentalCo</i> to anything other than <i>Hertz</i>:
+                <br>
+                <img src="images/destinasia-workshop/image83.png">
+                <br>
+                Send the request and see next slide to verify if the discount changes in the <i>Response Body</i>
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 120px;">
+                <h2>REST CLIENT TESTED</h2>
+            </div>
+            <div style="width: 1056px; height: 600px;" align="left">
+                Did the car company discount response change from 15 for HERTZ to 0 for any others?
+                <br>
+                <img src="images/destinasia-workshop/image84.png">
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 120px; color: white">
+                <h3>DESTINASIA SERIVCES HERO</h3>
+            </div>
+            <div style="width: 1056px; height: 400px;" align="left">
+                <h5>
+                    You are now the hero of the development team for delivering the Cloud hosted containerized
+                    application services for end-to-end testing. Everyone is very happy with the automation and
+                    repeatability for installing OpenShift Container Platform (OCP), JBoss Enterprise Application
+                    Platform (EAP), JBoss Business Rules Management System (BRMS), several containerized web services
+                    and test the end-to-end solution using a REST client.
+                    <br><br>
+                    Time to take a well deserved break...
+                </h5>
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 100px;">
+                <h2>END LAB 9</h2>
+            </div>
+            <div style="width: 1056px; height: 600px;">
+                <img src="images/destinasia-workshop/image85.png">
             </div>
         </section>
 
@@ -184,8 +250,9 @@
         </section>
 
         <section>
-            <h2>Up Next...</h2>
-            <h3><a href="lab09.html" style="color: red" target="_blank">Lab 9 - RestAPI client testing of backend services</a></h3>
+            <h2>BACK TO WORKSHOPS</h2>
+            <br>
+            <h3><a href="index.html" style="color: red" target="_blank">Head back to workshops...</a></h3>
         </section>
     </div>
 </div>
