@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Lab Introduction</title>
+
+    <meta name="description" content="Introduction to lab.">
+    <meta name="author" content="Eric D. Schabell">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/serif.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if (window.location.search.match(/print-pdf/gi)) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'css/print/pdf.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+        <section>
+            <div style="width: 1056px; height: 120px; color: white">
+                <h3>DESTINASIA SERIVCES TEAM</h3>
+            </div>
+            <div style="width: 1056px; height: 400px;">
+                <h5>
+                    In this workshop you become the lead developer who sets up a development environment for the Cloud
+                    hosted containerized application services for end-to-end testing. This entails installing OpenShift
+                    Container Platform (OCP), JBoss Enterprise Application Platform (EAP), JBoss Business Rules Management
+                    System (BRMS), several containerized web services and test the end-to-end solution using a REST
+                    client.
+                    <br><br>
+                    You will need to ensure that you have been given an USB (by the instructor) with the pre-requisites,
+                    or ensure you have internet access for downloading them.
+                </h5>
+            </div>
+            <div style="width: 1056px; height: 100px;">
+                <h5 style="color: grey"><b>Pre-requisites:</b> <i>Laptop with 16GB RAM, Docker 1.13, OpenShift Container
+                    Platform 3.5, JBoss EAP 7.0, JBoss BRMS 6.4</i></h5>
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 130px;">
+                <h2>ARCHITECTURE</h2>
+                <h4>The Destinasia lab overview</h4>
+            </div>
+            <div style="width: 1056px; height: 600px;">
+                <img src="images/destinasia-workshop/image12.png">
+            </div>
+        </section>
+
+        <section>
+            <h2>LET'S GET STARTED...</h2>
+            <h3><a href="lab01.html" style="color: red" target="_blank">Lab 1 - Install OpenShift Container Platform</a></h3>
+        </section>
+    </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+
+<script>
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [{
+            src: 'lib/js/classList.js',
+            condition: function() {
+                return !document.body.classList;
+            }
+        }, {
+            src: 'plugin/markdown/marked.js',
+            condition: function() {
+                return !!document.querySelector('[data-markdown]');
+            }
+        }, {
+            src: 'plugin/markdown/markdown.js',
+            condition: function() {
+                return !!document.querySelector('[data-markdown]');
+            }
+        }, {
+            src: 'plugin/highlight/highlight.js',
+            async: true,
+            callback: function() {
+                hljs.initHighlightingOnLoad();
+            }
+        }, {
+            src: 'plugin/zoom-js/zoom.js',
+            async: true,
+            condition: function() {
+                return !!document.body.classList;
+            }
+        }, {
+            src: 'plugin/notes/notes.js',
+            async: true,
+            condition: function() {
+                return !!document.body.classList;
+            }
+        }]
+    });
+</script>
+
+</body>
+
+</html>
