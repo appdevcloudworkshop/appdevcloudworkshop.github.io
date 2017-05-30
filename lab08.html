@@ -79,13 +79,15 @@
                     <li>They are found here:</li>
                     <br>
                     <ul>
-                        <li><p style="font-size: 24px"><code>$ cd support/playbooks/deploy-ocp-services</code></p></li>
+                        <li><p style="font-size: 24px; color: darkred"><code>$ cd support/playbooks/deploy-ocp-services</code></p></li>
                     </ul>
                     <br>
                     <li>Let's deploy the integration service:</li>
+                    <br>
+                    <ul>
+                        <li><p style="font-size: 24px; color: darkred"><code>$ ./ansible-playbook-fuseservice.sh</code></p></li>
+                    </ul>
                 </ul>
-                <br><br>
-                <img src="images/destinasia-workshop/image71.png" align="right">
             </div>
         </section>
 
@@ -99,7 +101,7 @@
                         OpenShift Container Platform:</li>
                     <br>
                     <ul>
-                        <li><p style="font-size: 24px"><code>$ ./ansible-playbook-fuseservice.sh</code></p></li>
+                        <li><p style="font-size: 24px; color: darkred"><code>$ ./ansible-playbook-fuseservice.sh</code></p></li>
                     </ul>
                 </ul>
             </div>
@@ -130,7 +132,7 @@
                     <li>It can also fail due to networking issues, causing maven dependencies failures</li>
                     <li>To determine cause, see the error message in the build log:</li>
                 </ul>
-                <img src="images/destinasia-workshop/image74.png" align="right">
+                <img height="60%" width="60%" src="images/destinasia-workshop/image74.png" align="right">
             </div>
         </section>
 
@@ -138,7 +140,7 @@
             <div style="width: 1056px; height: 150px;">
                 <h2>HOW TO FIX</h2>
             </div>
-            <div style="width: 1056px; height: 550px;" align="left">
+            <div style="width: 1056px; height: 300px;" align="left">
                 Fix networking issues or install missing services before trying to rebuild integration service.
             </div>
         </section>
