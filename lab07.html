@@ -79,13 +79,15 @@
                     <li>They are found here:</li>
                     <br>
                     <ul>
-                        <li><p style="font-size: 24px"><code>$ cd support/playbooks/deploy-ocp-services</code></p></li>
+                        <li><p style="font-size: 24px; color: darkred"><code>$ cd support/playbooks/deploy-ocp-services</code></p></li>
                     </ul>
                     <br>
                     <li>Let's deploy the hotel service:</li>
+                    <br>
+                    <ul>
+                        <li><p style="font-size: 24px; color: darkred"><code>$ ./ansible-playbook-phpservice.sh</code></p></li>
+                    </ul>
                 </ul>
-                <br><br>
-                <img src="images/destinasia-workshop/image64.png" align="right">
             </div>
         </section>
 
@@ -99,7 +101,7 @@
                         OpenShift Container Platform:</li>
                     <br>
                     <ul>
-                        <li><p style="font-size: 24px"><code>$ ./ansible-playbook-phpservice.sh</code></p></li>
+                        <li><p style="font-size: 24px; color: darkred"><code>$ ./ansible-playbook-phpservice.sh</code></p></li>
                     </ul>
                 </ul>
             </div>
@@ -144,14 +146,14 @@
                 For some reason the PHP stream was not added, do this by hand:
                 <br><br>
                 <ul>
-                    <li><p style="font-size: 24px"><code>$ oc login -u system:admin</code></p></li>
-                    <li><p style="font-size: 24px"><code>$ oc create -n openshift -f 'https://raw.githubusercontent.com/openshift/openshift-ansible/master/roles/openshift_examples/files/examples/v1.4/image-streams/image-streams-rhel7.json'</code></p></li>
+                    <li><p style="font-size: 24px; color: darkred"><code>$ oc login -u system:admin</code></p></li>
+                    <li><p style="font-size: 24px; color: darkred"><code>$ oc create -n openshift -f 'https://raw.githubusercontent.com/openshift/openshift-ansible/master/roles/openshift_examples/files/examples/v1.4/image-streams/image-streams-rhel7.json'</code></p></li>
                 </ul>
                 <br><br>
                 Then hotel service playbook again (or if build in OCP console failed, rebuild it):
                 <br><br>
                 <ul>
-                    <li><p style="font-size: 24px"><code>$ ./ansible-playbook-phpservice.sh</code></p></li>
+                    <li><p style="font-size: 24px; color: darkred"><code>$ ./ansible-playbook-phpservice.sh</code></p></li>
                 </ul>
             </div>
         </section>
