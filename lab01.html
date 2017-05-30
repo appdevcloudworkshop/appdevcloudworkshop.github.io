@@ -86,35 +86,19 @@
         </section>
 
         <section>
-            <div style="width: 1056px; height: 130px;">
-                <h2>INSTALL OCP</h2>
-            </div>
-            <div style="width: 1056px; height: 500px;">
-                <ul>
-                    <li>Download <a href="https://github.com/redhatdemocentral/ocp-install-demo/archive/master.zip" style="color: red" target="_blank">ocp-install-demo</a> and unzip</li>
-                    <li>Run init.sh or init.bat (Windows admin privileges)</li>
-                    <ul>
-                        <li><p style="font-size: 24px"><code>$ unzip ocp-install-demo-master.zip</code></p></li>
-                        <li><p style="font-size: 24px"><code>$ cd ocp-install-demo-master</code></p></li>
-                        <li><p style="font-size: 24px"><code>$ ./init.{sh|bat}</code></p></li>
-                    </ul>
-                    <li>See next slides for dealing with any issues</li>
-                    <img width="30%" height="30%" src="images/destinasia-workshop/image02.png" align="right">
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <div style="width: 1056px; height: 130px;">
-                <h2>ISSUES: VIRTUALBOX</h2>
+            <div style="width: 1056px; height: 150px;">
+                <h2>REQUIREMENTS</h2>
+                <h4>INSTALL VIRTUALBOX</h4>
             </div>
             <div style="width: 1056px; height: 200px;" align="left">
-                <b>Possible Mac error:</b>
+                Mac and Windows users need to install Virtual Box.
+                <br><br>
+                <b>During OCP install, possible error:</b>
                 <br>
                 <ul>
-                    <li><p style="font-size: 24px"><code>VirtualBox is required but not installed yet... download here:
-                        <a href="https://www.virtualbox.org/wiki/Downloads" style="color: red" target="_blank">
-                            https://www.virtualbox.org/wiki/Downloads</a></code></p></li>
+                    <li><p style="font-size: 24px"><code>"VirtualBox is required but not installed yet... download here:
+                        <a href="https://www.virtualbox.org/wiki/Downloads" style="color: darkred" target="_blank">
+                            https://www.virtualbox.org/wiki/Downloads</a>"</code></p></li>
                 </ul>
                 <br><br>
                 <b>Fix:</b>
@@ -127,114 +111,80 @@
         </section>
 
         <section>
-            <div style="width: 1056px; height: 130px;">
-                <h2>ISSUES: DOCKER</h2>
+            <div style="width: 1056px; height: 150px;">
+                <h2>REQUIREMENTS</h2>
+                <h4>INSTALL DOCKER</h4>
             </div>
-            <div style="width: 1056px; height: 200px;" align="left">
-                <b>Missing:</b>
+            <div style="width: 1056px; height: 500px;" align="left">
+                Everyone needs an engine installed and running.
+                <br><br>
+                <b>During OCP install, possible errors:</b>
                 <br>
                 <ul>
-                    <li><p style="font-size: 24px"><code>Docker is required but not installed yet... download here:
-                        <a href="https://store.docker.com/search?offering=community&type=edition" style="color: red"
-                           target="_blank">https://store.docker.com/search?offering=community&type=edition</a></code></p></li>
+                    <li><p style="font-size: 24px"><code>"Docker is required but not installed yet... download here:
+                        <a href="https://store.docker.com/search?offering=community&type=edition" style="color: darkred"
+                           target="_blank">https://store.docker.com/search?offering=community&type=edition</a>"</code></p></li>
+                    <li><p style="font-size: 24px"><code>"Docker is installed... checking for valid version...Docker deamon is not running...
+                        please start Docker for osX..."</code></p></li>
+                    <li><p style="font-size: 24px"><code>"Docker deamon is not running... or is running insecurely...Check for instructions
+                        at: <a href="https://docs.docker.com/linux" style="color: darkred" target="_blank">
+                            https://docs.docker.com/linux</a>"</code></p></li>
+                    <li><p style="font-size: 24px"><code>"Docker engine version X.X found... need 17.03, please update:
+                        <a href="https://store.docker.com/search?offering=community&type=edition" style="color: darkred" target="_blank">https://store.docker.com/search?offering=community&type=edition</a>"</code></p></li>
+                </ul>
+                <br>
+                <b>Fix:</b>
+                <br>
+                <ul>
+                    <li>Download, install and start Docker version needed.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 150px;">
+                <h2>REQUIREMENTS</h2>
+                <h4>INSTALL OC CLIENT</h4>
+            </div>
+            <div style="width: 1056px; height: 500px;" align="left">
+                Everyone needs OpenShift CLI tool 'oc' installed.
+                <br><br>
+                <b>During OCP install, possible errors:</b>
+                <br>
+                <ul>
+                    <li><p style="font-size: 24px"><code>"OpenShift CLI tooling is required but not installed yet... download here:
+                        <a href="https://drive.google.com/open?id=0B9WSViV5BZ4aVXV5U3F4LVVmWVk" style="color: darkred"
+                           target="_blank">https://drive.google.com/open?id=0B9WSViV5BZ4aVXV5U3F4LVVmWVk</a>"</code></p></li>
+                    <li><p style="font-size: 24px"><code>"OpenShift command line tools installed... checking for valid version...
+                        Version of installed OpenShift command line tools is vX.X.X, must be v3.x.x or higher...<br>
+                        Download for Mac/Linux/Windows here:<br>
+                        <a href="https://drive.google.com/open?id=0B9WSViV5BZ4aVXV5U3F4LVVmWVk" style="color: darkred"
+                           target="_blank">https://drive.google.com/open?id=0B9WSViV5BZ4aVXV5U3F4LVVmWVk</a>"</code></p></li>
                 </ul>
                 <br><br>
                 <b>Fix:</b>
                 <br>
                 <ul>
-                    <li>Download, install and start Docker version 17.03</li>
-                </ul>
+                    <li>Download and install OpenShift 'oc' client.</li>
                 </ul>
             </div>
         </section>
 
         <section>
             <div style="width: 1056px; height: 130px;">
-                <h2>ISSUES: DOCKER</h2>
+                <h2>INSTALL OCP</h2>
             </div>
-            <div style="width: 1056px; height: 350px;" align="left">
-                <b>Not running:</b>
-                <br>
+            <div style="width: 1056px; height: 500px;">
                 <ul>
-                    <li><p style="font-size: 24px"><code>Docker is installed... checking for valid version...Docker deamon is not running...
-                        please start Docker for osX...</code></p></li>
-                    <li><p style="font-size: 24px"><code>Docker deamon is not running... or is running insecurely...Check for instructions
-                        at: <a href="https://docs.docker.com/linux" style="color: red" target="_blank">
-                            https://docs.docker.com/linux</a></code></p></li>
-                </ul>
-                <br><br>
-                <b>Fix:</b>
-                <br>
-                <ul>
-                    <li>Download, install and start Docker version 17.03</li>
-                </ul>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <div style="width: 1056px; height: 130px;">
-                <h2>ISSUES: DOCKER</h2>
-            </div>
-            <div style="width: 1056px; height: 200px;" align="left">
-                <b>Version problems:</b>
-                <br>
-                <ul>
-                    <li><p style="font-size: 24px"><code>Docker engine version X.X found... need 17.03, please update:
-                        <a href="https://store.docker.com/search?offering=community&type=edition" style="color: red" target="_blank">https://store.docker.com/search?offering=community&type=edition</a></code></p></li>
-                </ul>
-                <br><br>
-                <b>Fix:</b>
-                <br>
-                <ul>
-                    <li>Download, install and start Docker version 17.03</li>
-                </ul>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <div style="width: 1056px; height: 130px;">
-                <h2>ISSUES: OC CLIENT</h2>
-            </div>
-            <div style="width: 1056px; height: 200px;" align="left">
-                <b>Missing:</b>
-                <br>
-                <ul>
-                    <li><p style="font-size: 24px"><code>OpenShift CLI tooling is required but not installed yet... download here:
-                        <a href="https://drive.google.com/open?id=0B9WSViV5BZ4aVXV5U3F4LVVmWVk" style="color: red"
-                           target="_blank">https://drive.google.com/open?id=0B9WSViV5BZ4aVXV5U3F4LVVmWVk</a></code></p></li>
-                </ul>
-                <br><br>
-                <b>Fix:</b>
-                <br>
-                <ul>
-                    <li>Download and install OpenShift oc client.</li>
-                </ul>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <div style="width: 1056px; height: 130px;">
-                <h2>ISSUES: OC CLIENT</h2>
-            </div>
-            <div style="width: 1056px; height: 300px;" align="left">
-                <b>Version:</b>
-                <br>
-                <ul>
-                    <li><p style="font-size: 24px"><code>OpenShift command line tools installed... checking for valid version...</code></li>
-                    <li><p style="font-size: 24px">Version of installed OpenShift command line tools is vX.X.X, must be v3.x.x or higher...
-                        Download for Mac/Linux/Windows here:
-                        <a href="https://drive.google.com/open?id=0B9WSViV5BZ4aVXV5U3F4LVVmWVk" style="color: red"
-                           target="_blank">https://drive.google.com/open?id=0B9WSViV5BZ4aVXV5U3F4LVVmWVk</a></code></p></li>
-                </ul>
-                <br><br>
-                <b>Fix:</b>
-                <br>
-                <ul>
-                    <li>Download and install OpenShift oc client.</li>
-                </ul>
+                    <li>Download <a href="https://github.com/redhatdemocentral/ocp-install-demo/archive/master.zip" style="color: red" target="_blank">ocp-install-demo</a> and unzip</li>
+                    <li>Run init.sh or init.bat (Windows needs admin privileges)</li>
+                    <ul>
+                        <li><p style="font-size: 24px"><code style="color: darkred">$ unzip ocp-install-demo-master.zip</code></p></li>
+                        <li><p style="font-size: 24px"><code style="color: darkred">$ cd ocp-install-demo-master</code></p></li>
+                        <li><p style="font-size: 24px"><code style="color: darkred">$ ./init.{sh|bat}</code></p></li>
+                    </ul>
+                    <li>See next slides for dealing with any issues</li>
+                    <img width="30%" height="30%" src="images/destinasia-workshop/image02.png" align="right">
                 </ul>
             </div>
         </section>
@@ -313,13 +263,72 @@
             <div style="width: 1056px; height: 120px;">
                 <h2>LOG IN TO OCP</h2>
             </div>
-            <div style="width: 1056px; height: 600px;">
-                <a href="http://192.168.99.100:8443" style="color: red" target="_blank">http://192.168.99.100:8443</a>
+            <div style="width: 1056px; height: 300px;">
+                <a href="http://192.168.99.100:8443" style="color: darkred" target="_blank">http://192.168.99.100:8443</a>
                 <br><br>
                 <ul>
-                    <li><p style="font-size: 24px">user: <code>openshift-dev</code></p></li>
-                    <li><p style="font-size: 24px">password: <code>devel</code></p></li>
+                    <li><p style="font-size: 24px;" >user: <code style="color: darkred">openshift-dev</code></p></li>
+                    <li><p style="font-size: 24px;">password: <code style="color: darkred">devel</code></p></li>
                 </ul>
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 180px;">
+                <h2>STOP / RESTART OCP</h2>
+                <h4>GOOD NEWS, IT'S PERSISTENT...</h4>
+            </div>
+            <div style="width: 1056px; height: 600px;" align="left">
+                Persistence is enabled, so to shutdown and restart the openshift cluster with your projects in place DO NOT run the following commands:
+                <br><br>
+                <code style="color: darkred">
+                    # This will remove the installation:<br>
+                    $ docker-machine rm -f openshift
+                    <br><br>
+                    # This will initialized OCP:<br>
+                    $ ./init.sh
+                </code>
+                <br><br>
+                Instead, see the following slide...
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 180px;">
+                <h2>SHUTDOWN OCP</h2>
+                <h4>STOP OPENSHIFT CLUSTER</h4>
+            </div>
+            <div style="width: 1056px; height: 600px;" align="left">
+                Shutdown the openshift cluster with your projects in place as follows:
+                <br><br>
+                <code style="font-size: 24px; color: darkred">
+                    # shutdown using:<br>
+                    $ oc cluster down --docker-machine=openshift<br>
+                    <br>
+                    $ docker-machine stop openshift<br>
+                </code>
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 180px;">
+                <h2>RESTART OCP</h2>
+                <h4>RESTART OPENSHIFT CLUSTER</h4>
+            </div>
+            <div style="width: 1056px; height: 600px;" align="left">
+                Restart the openshift cluster with your projects in place as follows (remember, it takes time for
+                containers to start up):
+                <br>
+                <code style="font-size: 24px; color: darkred">
+                    # restart use the existing data and configuration:<br>
+                    $ docker-machine start openshift<br>
+                    <br>
+                    $ oc cluster up --image=registry.access.redhat.com/openshift3/ose  \<br>
+                      --host-data-dir=/var/lib/boot2docker/ocp-data  \<br>
+                      --docker-machine=openshift   \<br>
+                      --host-config-dir=/var/lib/boot2docker/ocp-config  \<br>
+                      --use-existing-config=true  --host-pv-dir=/var/lib/boot2docker/ocp-pv<br>
+                </code>
             </div>
         </section>
 
