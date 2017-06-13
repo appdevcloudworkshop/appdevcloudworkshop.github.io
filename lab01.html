@@ -43,24 +43,6 @@
     <!-- Any section element inside of this container is displayed as a slide -->
     <div class="slides">
         <section>
-            <div style="width: 1056px; height: 120px; color: white">
-                <h3>HOW EACH LAB WORKS</h3>
-            </div>
-            <div style="width: 1056px; height: 400px;" align="left">
-                <h5>
-                    A lab starts with a title page, a lab goal explaining what you're achieving and an overview
-                    architectural diagram highlighting in <i style="color: red;">RED</i> the component being worked
-                    on. The rest of the lab focuses on guiding through the steps to achieve the presented goal.
-                    <br><br>
-                    Each lab will finish up with the state you should be seeing, a page of contact information for
-                    eventual questions and a link to the next lab.
-                    <br><br>
-                    Now it's time to get to work...
-                </h5>
-            </div>
-        </section>
-
-        <section>
             <h2>LAB 1</h2>
             <h3>Install OpenShift Container Platform</h3>
         </section>
@@ -106,8 +88,8 @@
                 <b>During OCP install, possible error:</b>
                 <br>
                 <ul>
-                    <li><p style="font-size: 24px"><code>"VirtualBox is required but not installed yet... download here:
-                        <a href="https://www.virtualbox.org/wiki/Downloads" style="color: darkred" target="_blank">
+                    <li><p style="font-size: 24px; color: darkred"><code>"VirtualBox is required but not installed yet... download here:
+                        <a href="https://www.virtualbox.org/wiki/Downloads" style="color: midnightblue" target="_blank">
                             https://www.virtualbox.org/wiki/Downloads</a>"</code></p></li>
                 </ul>
                 <br><br>
@@ -131,16 +113,16 @@
                 <b>During OCP install, possible errors:</b>
                 <br>
                 <ul>
-                    <li><p style="font-size: 24px"><code>"Docker is required but not installed yet... download here:
-                        <a href="https://store.docker.com/search?offering=community&type=edition" style="color: darkred"
+                    <li><p style="font-size: 24px; color: darkred"><code>"Docker is required but not installed yet... download here:
+                        <a href="https://store.docker.com/search?offering=community&type=edition" style="color: midnightblue"
                            target="_blank">https://store.docker.com/search?offering=community&type=edition</a>"</code></p></li>
-                    <li><p style="font-size: 24px"><code>"Docker is installed... checking for valid version...Docker deamon is not running...
+                    <li><p style="font-size: 24px; color: darkred;"><code>"Docker is installed... checking for valid version...Docker deamon is not running...
                         please start Docker for osX..."</code></p></li>
-                    <li><p style="font-size: 24px"><code>"Docker deamon is not running... or is running insecurely...Check for instructions
-                        at: <a href="https://docs.docker.com/linux" style="color: darkred" target="_blank">
+                    <li><p style="font-size: 24px; color: darkred"><code>"Docker deamon is not running... or is running insecurely...Check for instructions
+                        at: <a href="https://docs.docker.com/linux" style="color: midnightblue" target="_blank">
                             https://docs.docker.com/linux</a>"</code></p></li>
-                    <li><p style="font-size: 24px"><code>"Docker engine version X.X found... need 17.03, please update:
-                        <a href="https://store.docker.com/search?offering=community&type=edition" style="color: darkred" target="_blank">https://store.docker.com/search?offering=community&type=edition</a>"</code></p></li>
+                    <li><p style="font-size: 24px; color: darkred"><code>"Docker engine version X.X found... need 17.03, please update:
+                        <a href="https://store.docker.com/search?offering=community&type=edition" style="color: midnightblue" target="_blank">https://store.docker.com/search?offering=community&type=edition</a>"</code></p></li>
                 </ul>
                 <br>
                 <b>Fix:</b>
@@ -162,13 +144,13 @@
                 <b>During OCP install, possible errors:</b>
                 <br>
                 <ul>
-                    <li><p style="font-size: 24px"><code>"OpenShift CLI tooling is required but not installed yet... download here:
-                        <a href="https://drive.google.com/open?id=0B9WSViV5BZ4aVXV5U3F4LVVmWVk" style="color: darkred"
+                    <li><p style="font-size: 24px; color: darkred"><code>"OpenShift CLI tooling is required but not installed yet... download here:
+                        <a href="https://drive.google.com/open?id=0B9WSViV5BZ4aVXV5U3F4LVVmWVk" style="color: midnightblue"
                            target="_blank">https://drive.google.com/open?id=0B9WSViV5BZ4aVXV5U3F4LVVmWVk</a>"</code></p></li>
-                    <li><p style="font-size: 24px"><code>"OpenShift command line tools installed... checking for valid version...
+                    <li><p style="font-size: 24px; color: darkred"><code>"OpenShift command line tools installed... checking for valid version...
                         Version of installed OpenShift command line tools is vX.X.X, must be v3.x.x or higher...<br>
                         Download for Mac/Linux/Windows here:<br>
-                        <a href="https://drive.google.com/open?id=0B9WSViV5BZ4aVXV5U3F4LVVmWVk" style="color: darkred"
+                        <a href="https://drive.google.com/open?id=0B9WSViV5BZ4aVXV5U3F4LVVmWVk" style="color: midnightblue"
                            target="_blank">https://drive.google.com/open?id=0B9WSViV5BZ4aVXV5U3F4LVVmWVk</a>"</code></p></li>
                 </ul>
                 <br><br>
@@ -186,7 +168,7 @@
             </div>
             <div style="width: 1056px; height: 500px;">
                 <ul>
-                    <li>Download <a href="https://github.com/redhatdemocentral/ocp-install-demo/archive/master.zip" style="color: red" target="_blank">ocp-install-demo</a> and unzip</li>
+                    <li>Download <a href="https://github.com/redhatdemocentral/ocp-install-demo/archive/master.zip" style="color: midnightblue" target="_blank">ocp-install-demo</a> and unzip</li>
                     <li>Run init.sh or init.bat (Windows needs admin privileges)</li>
                     <ul>
                         <li><p style="font-size: 24px"><code style="color: darkred">$ unzip ocp-install-demo-master.zip</code></p></li>
@@ -270,11 +252,12 @@
         </section>
 
         <section>
-            <div style="width: 1056px; height: 120px;">
+            <div style="width: 1056px; height: 170px;">
                 <h2>LOG IN TO OCP</h2>
+                <h5>Your IP address may differ, see console output</h5>
             </div>
             <div style="width: 1056px; height: 300px;">
-                <a href="http://192.168.99.100:8443" style="color: darkred" target="_blank">http://192.168.99.100:8443</a>
+                <a href="http://192.168.99.100:8443" style="color: midnightblue" target="_blank">http://192.168.99.100:8443</a>
                 <br><br>
                 <ul>
                     <li><p style="font-size: 24px;" >user: <code style="color: darkred">openshift-dev</code></p></li>
@@ -363,14 +346,14 @@
             <div style="width: 600px; height: 100px; text-align: left">
                 Eric D. Schabell<br/>
                 Global Technology Evangelist Director<br/>
-                <a href="http://twitter.com/ericschabell" style="color: red" target="_blank">@ericschabell</a><br/>
-                <a href="http://schabell.org" style="color: red">http://schabell.org</a>
+                <a href="http://twitter.com/ericschabell" style="color: midnightblue" target="_blank">@ericschabell</a><br/>
+                <a href="http://schabell.org" style="color: midnightblue">http://schabell.org</a>
             </div>
         </section>
 
         <section>
             <h2>UP NEXT...</h2>
-            <h3><a href="lab02.html" style="color: red" target="_blank">Lab 2 - Install JBoss BRMS</a></h3>
+            <h3><a href="lab02.html" style="color: midnightblue" target="_blank">Lab 2 - Install JBoss BRMS</a></h3>
         </section>
     </div>
 </div>
