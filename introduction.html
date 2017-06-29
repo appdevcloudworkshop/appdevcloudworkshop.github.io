@@ -135,7 +135,8 @@
                     <ul>
                         <li><a href="https://store.docker.com/search?offering=community&type=edition" style="color: midnightblue" target="_blank"><b>Docker v17.03</b></a></li>
                         <li><a href="https://drive.google.com/open?id=0B9WSViV5BZ4aVXV5U3F4LVVmWVk" style="color: midnightblue" target="_blank"><b>OpenShift CLI v3.5.5.5</b></a></li>
-                        <li><a href="https://drive.google.com/open?id=0B9WSViV5BZ4aVXV5U3F4LVVmWVk" style="color: midnightblue" target="_blank"><b>VirtualBox (Mac / Windows)</b></a></li>
+                        <li><a href="https://www.virtualbox.org/wiki/Downloads" style="color: midnightblue" target="_blank"><b>VirtualBox (Mac / Windows)</b></a></li>
+                        <li><a href="https://github.com/dhiltgen/docker-machine-kvm/releases" style="color: midnightblue" target="_blank"><b>KVM (Linux)</b></a></li>
                         <li>Ansible playbook tooling:</li>
                         <ul>
                             <li><a href="http://docs.ansible.com/ansible/intro_installation.html#installing-the-control-machine" style="color: midnightblue" target="_blank"><b>Install instructions for Linux</b></a></li>
@@ -152,9 +153,72 @@
         </section>
 
         <section data-background="images/rh-images/rh-bg-light.png" data-background-size="cover" data-background-position="bottom">
+            <div style="width: 100%; height: 180px; color: white">
+                <h2 style="color: white;">BEHIND THE SCENES</h2>
+                <h4 style="color: white">WHAT'S IN AN OCP INSTALL?</h4>
+            </div>
+            <div style="width: 100%; height: 380px; text-align: left; color: white">
+                <ol>
+                    <li>Checks for dependencies to support install (OCP, engine, oc client, VM)</li>
+                    <li>Pre-configures a specific docker-machine (VM)</li>
+                    <li>oc client pulls OCP image from Red Hat registry to install on previously specific pre-configured docker-machine (VM)</li>
+                </ol>
+            </div>
+        </section>
+
+        <section data-background="images/rh-images/rh-bg-light.png" data-background-size="cover" data-background-position="bottom">
+            <div style="width: 100%; height: 180px; color: white">
+                <h2 style="color: white;">BEHIND THE SCENES</h2>
+                <h4 style="color: white">WHAT DEPENDENCY CHECKS?</h4>
+            </div>
+            <div style="width: 100%; height: 200px; text-align: left; color: white">
+                <ol>
+                    <li>Checks for KVM or VirtualBox install and version validation</li>
+                    <li>Checks for container engine install and version validation</li>
+                    <li>Checks for running container engine</li>
+                    <li>Checks for oc client tool install and version validation</li>
+                </ol>
+            </div>
+            <div style="width: 60%; height: 200px;" align="right">
+                <img width="70%" height="100%" align="right" src="images/introduction/image15.png">
+            </div>
+        </section>
+
+        <section data-background="images/rh-images/rh-bg-light.png" data-background-size="cover" data-background-position="bottom">
+            <div style="width: 100%; height: 180px; color: white">
+                <h2 style="color: white;">BEHIND THE SCENES</h2>
+                <h4 style="color: white">DETAILS PRE-CONFIGURED VM</h4>
+            </div>
+            <div style="width: 100%; height: 380px; text-align: left; color: white">
+                <ol>
+                    <li>Using <code>docker-machine</code> as tool for defining a VM</li>
+                    <li>Specify the VM driver, cpu allocation, memory allocation, identify our internal insecure VM registry</li>
+                    <li>Specify VM image boot2docker url, specify dependency on docker 1.13 for OCP in VM</li>
+                    <li>Name VM <code>openshift</code>, important to provide target to stop and start VM later...</li>
+                </ol>
+            </div>
+        </section>
+
+        <section data-background="images/rh-images/rh-bg-light.png" data-background-size="cover" data-background-position="bottom">
+            <div style="width: 100%; height: 180px; color: white">
+                <h2 style="color: white;">BEHIND THE SCENES</h2>
+                <h4 style="color: white">DETAILS HOW TO INSTALL OCP ON VM</h4>
+            </div>
+            <div style="width: 100%; height: 380px; text-align: left; color: white">
+                <ol>
+                    <li>Using <code>oc</code> client to spin up OCP on previously defined VM</li>
+                    <li>Specifically, using: <code>oc cluster up</code>, but need OCP instead of community OpenShift) and persistence configuration for stop / restarting</li>
+                    <li>Specify Red Hat registry image to pull: <code>registry.access.redhat.com/openshift3/ose</code></li>
+                    <li>Specify persistence configurations; data directory, ocp configuration and pv directory</li>
+                    <li>Specify use of <code>openshift</code> VM and specify version oc client</li>
+                </ol>
+            </div>
+        </section>
+
+        <section data-background="images/rh-images/rh-bg-light.png" data-background-size="cover" data-background-position="bottom">
             <div style="width: 1056px; height: 130px;">
                 <h2 style="color: white">PREVIEW OCP INSTALL</h2>
-                <h4 style="color: white">OpenShift Container Platform installation video</h4>
+                <h4 style="color: white">WATCH THE INSTALLATON VIDEO</h4>
             </div>
             <div style="width: 1056px; height: 600px;">
                 <a href="https://youtu.be/Rj0We91ec9Y" style="color: darkred" target="_blank"><img src="images/ocp-install-video.png"></a>
@@ -164,7 +228,7 @@
         <section data-background="images/rh-images/rh-bg-light.png" data-background-size="cover" data-background-position="bottom">
             <div style="width: 100%; height: 180px; color: white">
                 <h2 style="color: white;">INSTALLATION</h2>
-                <h4 style="color: white">OPENSHIFT CONTAINER PLATFORM IN MINUTES</h4>
+                <h4 style="color: white">NOW LETS INSTALL OCP IN MINUTES</h4>
             </div>
             <div style="width: 100%; height: 380px; text-align: left; color: white">
                 <ol>
