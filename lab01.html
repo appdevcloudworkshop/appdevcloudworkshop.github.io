@@ -205,6 +205,33 @@
         <section>
             <div style="width: 1056px; height: 150px;">
                 <h2>REQUIREMENTS</h2>
+                <h4>INSTALL DOCKER</h4>
+            </div>
+            <div style="width: 1056px; height: 500px;" align="left">
+                Everyone needs an engine installed and running.
+                <br><br>
+                <b>During OCP install, possible errors:</b>
+                <br>
+                <ul>
+                    <li><p style="font-size: 24px; color: darkred"><code>"docker-machine: command not found"</code></p></li>
+                    <li><p style="font-size: 24px; color: darkred;"><code>"Error occurred during openshift docker machine creation..."</code></p></li>
+                </ul>
+                <br>
+                <b>Fix:</b>
+                <br>
+                <ul>
+                    <li>Missing 'docker-machine' command, install:</li>
+                    <ul>
+                        <li><p style="font-size: 24px; color: darkred">$ <code>curl -L https://github.com/docker/machine/releases/download/v0.12.2/docker-machine-`uname -s`-`uname -m` >/tmp/docker-machine &&
+                            chmod +x /tmp/docker-machine && sudo cp /tmp/docker-machine /usr/local/bin/docker-machine</code></p></li>
+                    </ul>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 150px;">
+                <h2>REQUIREMENTS</h2>
                 <h4>INSTALL OC CLIENT</h4>
             </div>
             <div style="width: 1056px; height: 500px;" align="left">
