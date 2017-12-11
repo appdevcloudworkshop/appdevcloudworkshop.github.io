@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Destinasia Workshop Intro OCP 3.6</title>
+
+    <meta name="description" content="Destinasia Workshop Intro OCP 3.6">
+    <meta name="author" content="Eric D. Schabell">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/serif.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if( window.location.search.match( /print-pdf/gi ) ) {
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'css/print/pdf.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        }
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+        <section data-background="images/rh-images/rh-bg-start.png" data-background-size="cover" data-background-position="bottom">
+            <div style="width: 1056px; height: 250px; color: white">
+                <h2 style="color: white;">Red Hat Cloud Suite</h2>
+                <h2 style="color: white;">Destinasia Introduction</h2>
+            </div>
+            <div style="width: 1056px; height: 150px; color: white">
+                <h5 style="color: white;">Get started with AppDev in the Cloud</h5>
+            </div>
+            <div style="width: 1056px; height: 100px;">
+                <ul style="color: white">
+                    <i>Destinasia workshop - OpenShift Container Platform, Containers, JBoss BRMS, xPaaS, PHP, .NET & JEE</i>
+                </ul>
+            </div>
+            <aside class="notes">
+                Welcome to the Destinasia workshop introduction. You will experience the power of appdev in the cloud
+                as developer for Destinasia Travel Agency, putting togehter backend services in containers and hosted
+                on your private PaaS in OpenShift Container Platform.
+            </aside>
+        </section>
+
+        <section data-background="images/rh-images/rh-bg-light.png" data-background-size="cover" data-background-position="bottom">
+            <div style="width: 100%; height: 150px; color: white">
+                <h2 style="color: white;">GUIDELINES</h2>
+            </div>
+            <div style="width: 100%; height: 100px; text-align: left; color: white">
+                Some things to watch for in the workshop:<br/>
+            </div>
+            <div style="width: 100%; height: 500px; text-align: left; color: white">
+                <ul>
+                    <li>All links you can click to follow are <b style="color: midnightblue">MIDNIGHT BLUE</b></li>
+                    <li>All video can be clicked on to view</li>
+                    <li>All code will be: <i style="color: darkred">System.out.println("DARK RED");</i></li>
+                    <li>Memory will be reserved for 12 GB of RAM:</li>
+                    <ul>
+                        <li>Prevent problems by <b style="color: darkred">CLOSING ALL OTHER APPLICATIONS</b></li>
+                        <li><b style="color: darkred">DO NOT USE GOOGLE CHROME</b> for this lab... to much memory needed per tab open</li>
+                    </ul>
+                </ul>
+            </div>
+        </section>
+
+        <section data-background="images/rh-images/rh-bg-light.png" data-background-size="cover" data-background-position="bottom">
+            <div style="width: 100%; height: 120px; color: white">
+                <h2 style="color: white;">WORKSHOP GOALS</h2>
+            </div>
+            <div style="width: 100%; height: 80px; text-align: left; color: white">
+                Gain insights into DevOps as used in a travel industry story:<br/>
+            </div>
+            <div style="width: 100%; height: 380px; text-align: left; color: white">
+                <ul>
+                    <li>Install OpenShift Container Platform (OCP)</li>
+                    <li>Build and deploy container with Destinasia Travel Rules</li>
+                    <li>Experience the power of Ansible, automate deployments:</li>
+                    <ul>
+                        <li>xPaaS Decision Service with Destinasia Travel Rules</li>
+                        <li>Hotel booking service (PHP)</li>
+                        <li>Car booking service (.Net)</li>
+                        <li>xPaaS Flight service (JEE)</li>
+                        <li>xPaaS Integration service</li>
+                    </ul>
+                </ul>
+            </div>
+        </section>
+
+        <section data-background="images/rh-images/rh-bg-light.png" data-background-size="cover" data-background-position="bottom">
+            <div style="width: 100%; height: 120px; color: white">
+                <h2 style="color: white;">WORKSHOP CLOUD</h2>
+            </div>
+            <img width="100%" height="100%" src="images/introduction/image01.png">
+        </section>
+
+        <section data-background="images/rh-images/rh-bg-light.png">
+            <div style="width: 100%; height: 90px; color: white">
+                <h2 style="color: white;">ARCHITECTURE</h2>
+            </div>
+            <div style="width: 100%; height: 630px; color: white">
+                <img width="100%" height="100%" src="images/introduction/image02.png">
+            </div>
+        </section>
+
+        <section data-background="images/rh-images/rh-bg-light.png" data-background-size="cover" data-background-position="bottom">
+            <div style="width: 100%; height: 120px; color: white">
+                <h2 style="color: white;">PREREQUISITES</h2>
+            </div>
+            <div style="width: 100%; height: 60px; text-align: left; color: white">
+                The following requirements should be downloaded:<br/>
+            </div>
+            <div style="width: 100%; height: 500px; text-align: left; color: white">
+                <ul>
+                    <li>Base needs:</li>
+                    <ul>
+                        <li><a href="https://store.docker.com/search?offering=community&type=edition" style="color: midnightblue" target="_blank"><b>Docker v17.06</b></a></li>
+                        <li><a href="https://access.redhat.com/downloads/content/290" style="color: midnightblue" target="_blank"><b>OpenShift CLI v3.6.173.0.21</b></a></li>
+                        <li><a href="https://www.virtualbox.org/wiki/Downloads" style="color: midnightblue" target="_blank"><b>VirtualBox (Mac / Windows)</b></a></li>
+                        <li><a href="https://github.com/dhiltgen/docker-machine-kvm/releases" style="color: midnightblue" target="_blank"><b>KVM (Linux)</b></a></li>
+                        <li>Ansible playbook tooling:</li>
+                        <ul>
+                            <li><a href="http://docs.ansible.com/ansible/intro_installation.html#installing-the-control-machine" style="color: midnightblue" target="_blank"><b>Install instructions for Linux</b></a>,
+                                <a href="http://docs.ansible.com/ansible/intro_installation.html#latest-releases-via-pip" style="color: midnightblue" target="_blank"><b>osX</b></a>,
+                                <a href="https://www.ansible.com/windows" style="color: midnightblue" target="_blank"><b>or Windows</b></a></li>
+                        </ul>
+                    </ul>
+                    <li>AppDev in the Cloud:</li>
+                    <ul>
+                        <li><a href="http://github.com/redhatdemocentral/ocp-install-demo" style="color: midnightblue" target="_blank"><b>OpenShift Container Platform Install Demo</b></a></li>
+                        <li><a href="http://github.com/redhatdemocentral/rhcs-destinasia-rules-demo" style="color: midnightblue" target="_blank"><b>Destinasia Travel Rules Demo</b></a></li>
+                    </ul>
+                </ul>
+            </div>
+        </section>
+
+        <section data-background="images/rh-images/rh-bg-light.png" data-background-size="cover" data-background-position="bottom">
+            <div style="width: 1056px; height: 130px;">
+                <h2 style="color: white">PREVIEW OCP INSTALL</h2>
+                <h4 style="color: white">WATCH THE INSTALLATON VIDEO</h4>
+            </div>
+            <div style="width: 1056px; height: 600px;">
+                <a href="https://youtu.be/Rj0We91ec9Y" style="color: darkred" target="_blank"><img src="images/ocp-install-video.png"></a>
+            </div>
+        </section>
+
+        <section data-background="images/rh-images/rh-bg-light.png" data-background-size="cover" data-background-position="bottom">
+            <div style="width: 100%; height: 180px; color: white">
+                <h2 style="color: white;">INSTALLATION</h2>
+                <h4 style="color: white">NOW LETS INSTALL OCP IN MINUTES</h4>
+            </div>
+            <div style="width: 100%; height: 380px; text-align: left; color: white">
+                <ol>
+                    <li>Download <a href="https://github.com/redhatdemocentral/ocp-install-demo/archive/master.zip" style="color: midnightblue" target="_blank"><b>ocp-install-demo</b></a> project and unzip</li>
+                    <li>Run init.sh or init.bat</li>
+                    <li>Enjoy next few minutes before logging in</li>
+                </ol>
+                <div style="width: 60%; height: 300px;" align="right">
+                    <img width="100%" height="100%" align="right" src="images/introduction/image03.png">
+                </div>
+            </div>
+        </section>
+
+        <section data-background="images/introduction/image03.png" data-background-size="cover" data-background-position="bottom">
+            <div style="width: 100%; height: 600px; color: red">
+                Log in to your new Cloud, for example this might be your assigned IP as reported during installation:<br><br>
+                <ul>
+                    <li><a href="http://192.168.99.100:8443" style="color: red" target="_blank"><b>http://192.168.99.100:8443</b></a></li>
+                    <li style="color: red">User: <b><i>openshift-dev</i></b></li>
+                    <li style="color: red">Password: <b><i>devel</i></b></li>
+                </ul>
+            </div>
+        </section>
+
+        <section data-background="images/rh-images/rh-bg-light.png" data-background-size="cover" data-background-position="bottom">
+            <div style="width: 100%; height: 150px; color: white">
+                <h2 style="color: white;">INSTALLATION</h2>
+                <h4 style="color: white">DESTINASIA TRAVEL RULES DEMO</h4>
+            </div>
+            <div style="width: 100%; height: 380px; text-align: left; color: white">
+                <ul>
+                    <li>Download <a href="https://github.com/redhatdemocentral/rhcs-destinasia-rules-demo/archive/master.zip" style="color: midnightblue" target="_blank"><b>rhcs-destinasia-rules-demo</b></a> project and unzip</li>
+                    <li>Download <a href="https://developers.redhat.com/download-manager/file/jboss-eap-7.0.0-installer.jar" style="color: midnightblue" target="_blank"><b>JBoss EAP 7.0.0</b></a>
+                        and <a href="https://developers.redhat.com/download-manager/content/origin/files/sha256/14/148eb9be40833d5da00bb6108cbed1852924135d25ceb6c601c62ba43f99f372/jboss-brms-6.4.0.GA-deployable-eap7.x.zip" style="color: midnightblue" target="_blank"><b>JBoss BRMS 6.4.0</b></a></li>
+                    <ul>
+                        <li>Add to <i>installs</i> directory</li>
+                    </ul>
+                    <li>Run init.sh or init.bat, point it at OCP installation IP address:</li>
+                    <br>
+                    <ul>
+                        <li><p style="font-size: 24px"><code style="color: darkred">$ init.sh 192.168.99.100</code></p></li>
+                    </ul>
+                    <br>
+                    <li>Enjoy the break before logging in:</li>
+                    <br>
+                    <ul>
+                        <li><p style="font-size: 22px"><code style="color: darkred">http://destinasia-rules-demo-appdev-in-cloud.192.168.99.100.nip.io/business-central (password: jbossbrms1!)</code></p>
+                    </ul>
+                </ul>
+            </div>
+        </section>
+
+        <section data-background="images/rh-images/rh-bg-light.png" data-background-size="100%" data-background-position="center">
+            <div style="width: 980px; height: 80px; color: white">
+                <h4 style="color: white"><b>Decision Table: <i>HERTZ</i> car discount is <i>15</i></b></h4>
+            </div>
+            <div style="width: 980px; height: 400px;">
+                <img width="100%" height="100%" src="images/introduction/image04.png">
+            </div>
+        </section>
+
+        <section data-background="images/rh-images/rh-bg-light.png" data-background-size="cover" data-background-position="bottom">
+            <div style="width: 100%; height: 180px; color: white">
+                <h2 style="color: white;">ANSIBLE AUTOMATION</h2>
+                <h4 style="color: white">DEPLOYMENTS WITH PLAYBOOKS</h4>
+            </div>
+            <div style="width: 100%; height: 380px; text-align: left; color: white">
+                Playbooks to deploy:<br><br>
+                <ol>
+                    <li>Destinasia Travel Rules from container to xPaaS Decision Server for discount service</li>
+                    <li>.Net project to ASPNET for car service</li>
+                    <li>JEE project to xPaaS EAP Server for flight service</li>
+                    <li>PHP project to PHP for hotel service</li>
+                    <li>Fuse project to xPaaS Integration Server for integration service</li>
+                </ol>
+            </div>
+        </section>
+
+        <section data-background="images/rh-images/rh-bg-light.png" data-background-size="100%" data-background-position="center">
+            <div style="width: 980px; height: 200px; color: white">
+                <h2 style="color: white;">ANSIBLE PLAYBOOK</h2>
+                <h4 style="color: white">IN SUPPORT DIRECTORY - RULE SERVICE</h4>
+            </div>
+            <div style="width: 980px; height: 600px;" align="left">
+                <code style="color: darkred">
+                    $ cd support/playbooks/deploy-ocp-services
+                    <br><br>
+                    # Run Rule service (xPaaS Decision Server) playbook
+                    <br>
+                    #
+                    <br>
+                    $ ./ansible-playbook-ruleservice.sh
+                </code>
+            </div>
+        </section>
+
+        <section data-background="images/rh-images/rh-bg-light.png" data-background-size="100%" data-background-position="center">
+            <div style="width: 980px; height: 200px; color: white">
+                <h2 style="color: white;">ANSIBLE PLAYBOOK</h2>
+                <h4 style="color: white">IN SUPPORT DIRECTORY - CAR SERVICE</h4>
+            </div>
+            <div style="width: 980px; height: 600px;" align="left">
+                <code style="color: darkred;">
+                    $ cd support/playbooks/deploy-ocp-services
+                    <br><br>
+                    # Run Car service (.Net) playbook
+                    <br>
+                    #
+                    <br>
+                    $ ./ansible-playbook-dotnetservice.sh
+                </code>
+            </div>
+        </section>
+
+        <section data-background="images/rh-images/rh-bg-light.png" data-background-size="100%" data-background-position="center">
+            <div style="width: 980px; height: 200px; color: white">
+                <h2 style="color: white;">ANSIBLE PLAYBOOK</h2>
+                <h4 style="color: white">IN SUPPORT DIRECTORY - FLIGHT SERVICE</h4>
+            </div>
+            <div style="width: 980px; height: 600px;" align="left">
+                <code style="color: darkred">
+                    $ cd support/playbooks/deploy-ocp-services
+                    <br><br>
+                    # Run Flight service (JEE) playbook
+                    <br>
+                    #
+                    <br>
+                    $ ./ansible-playbook-javaservice.sh
+                </code>
+            </div>
+        </section>
+
+        <section data-background="images/rh-images/rh-bg-light.png" data-background-size="100%" data-background-position="center">
+            <div style="width: 980px; height: 200px; color: white">
+                <h2 style="color: white;">ANSIBLE PLAYBOOK</h2>
+                <h4 style="color: white">IN SUPPORT DIRECTORY - HOTEL SERVICE</h4>
+            </div>
+            <div style="width: 980px; height: 600px;" align="left">
+                <code style="color: darkred">
+                    $ cd support/playbooks/deploy-ocp-services
+                    <br><br>
+                    # Run Hotel service (PHP) playbook
+                    <br>
+                    #
+                    <br>
+                    $ ./ansible-playbook-phpservice.sh
+                </code>
+            </div>
+        </section>
+
+        <section data-background="images/rh-images/rh-bg-light.png" data-background-size="100%" data-background-position="center">
+            <div style="width: 980px; height: 200px; color: white">
+                <h2 style="color: white;">ANSIBLE PLAYBOOK</h2>
+                <h4 style="color: white">IN SUPPORT DIRECTORY - INTEGRATION SERVICE</h4>
+            </div>
+            <div style="width: 980px; height: 600px;" align="left">
+                <code style="color: darkred">
+                    $ cd support/playbooks/deploy-ocp-services
+                    <br><br>
+                    # Run Integration service (xPaaS Integration Server) playbook
+                    <br>
+                    #
+                    <br>
+                    $ ./ansible-playbook-fuseservice.sh
+                </code>
+            </div>
+        </section>
+
+        <section data-background="images/rh-images/rh-bg-light.png" data-background-size="100%" data-background-position="center">
+            <div style="width: 980px; height: 120px; color: white">
+                <h2 style="color: white;">ANSIBLE IN ACTION</h2>
+                <h4 style="color: white">BUILDING SERVICES</h4>
+            </div>
+            <div style="width: 100%; height: 600px;">
+                <img width="100%" height="70%" src="images/introduction/image06.png"><img width="40%" height="20%" src="images/introduction/image07.png">
+            </div>
+        </section>
+
+        <section data-background="images/rh-images/rh-bg-light.png" data-background-size="100%" data-background-position="center">
+            <div style="width: 980px; height: 120px; color: white">
+                <h2 style="color: white;">ANSIBLE IN ACTION</h2>
+                <h4 style="color: white">DEPLOYING SERVICES</h4>
+            </div>
+            <div style="width: 100%; height: 600px;">
+                <img width="100%" height="70%" src="images/introduction/image08.png">
+            </div>
+        </section>
+
+        <section data-background="images/rh-images/rh-bg-light.png" data-background-size="100%" data-background-position="center">
+            <div style="width: 980px; height: 120px; color: white">
+                <h2 style="color: white;">ANSIBLE IN ACTION</h2>
+                <h4 style="color: white">SERVICES FINAL BUILDS</h4>
+            </div>
+            <div style="width: 100%; height: 600px;">
+                <img width="100%" height="70%" src="images/introduction/image09.png"><img width="40%" height="20%" src="images/introduction/image10.png">
+            </div>
+        </section>
+
+        <section data-background="images/rh-images/rh-bg-light.png" data-background-size="100%" data-background-position="center">
+            <div style="width: 980px; height: 100px; color: white">
+                <h3 style="color: white;">ANSIBLE SERVICES DEPLOYED</h3>
+            </div>
+            <div style="width: 100%; height: 600px;">
+                <img width="100%" height="100%" src="images/introduction/image11.png">
+            </div>
+        </section>
+
+        <section data-background="images/rh-images/rh-bg-light.png" data-background-size="100%" data-background-position="center">
+            <div style="width: 100%; height: 570px;">
+                <h4 style="color: white">Remember the <i>HERTZ</i> car discount?</h4>
+                <img width="85%" height="85%" src="images/introduction/image12.png">
+            </div>
+            <div style="width: 980px; height: 100px; color: white" align="left">
+                <ul>
+                    <li>Change <i><b>HERTZ</b></i> in <i><b>carRentalCo</b></i> field<br></li>
+                    <li>Verify xPaaS discount rule changes <i><b>carDisc</b></i> from <i><b>15 to 0</b></i></li>
+                </ul>
+            </div>
+        </section>
+
+        <section data-background="images/rh-images/rh-bg-light.png" data-background-size="cover" data-background-position="bottom">
+            <div style="width: 100%; height: 130px; color: white">
+                <h2 style="color: white;">WORKSHOP PROJECTS</h2>
+                <h4 style="color: white">RED HAT DEMO CENTRAL COLLECTION</h4>
+            </div>
+            <div style="width: 100%; height: 580px; text-align: left; color: white">
+                <img width="100%" height="100%" src="images/introduction/image13.png">
+            </div>
+        </section>
+
+        <section data-background="images/rh-images/rh-bg-light.png" data-background-size="cover" data-background-position="bottom">
+            <div style="width: 1056px; height: 250px; color: white">
+                <img src="images/introduction/image14.png">
+            </div>
+            <div style="width: 1056px; height: 500px; color: white">
+                <h2 style="color: white">NEXT UP...</h2>
+                <h5 style="color: white">You're about to become the lead developer for Destinasia Travel Agency discount rules project...
+                fame and fortune awaits if you can complete the workshop successfully...</h5>
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 120px; color: white">
+                <h3>DESTINASIA SERVICES TEAM</h3>
+            </div>
+            <div style="width: 1056px; height: 450px;">
+                <h5>
+                    Your tasked as the lead developer of the Destinasia travel discount project to set up
+                    a development environment in the Cloud for container-based application services deployments.
+                    <br><br>
+                    Once it's set up, you're validating the services using end-to-end testing. Tasks include installing OpenShift
+                    Container Platform (OCP), JBoss Enterprise Application Platform (EAP), JBoss Business Rules Management
+                    System (BRMS), several containerized web services and testing the solution using a REST client.
+                    <br><br>
+                    You'll need a laptop with minimum of 16GB of memory and internet access for downloading some of the
+                    requirements.
+                </h5>
+            </div>
+            <div style="width: 1056px; height: 150px;">
+                <h5 style="color: grey"><b>Pre-requisites:</b> <i>Laptop with 8GB RAM, Docker 17.06, OpenShift Container
+                    Platform 3.6, JBoss EAP 7.0, JBoss BRMS 6.4</i></h5>
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 120px; color: white">
+                <h3>HOW EACH LAB WORKS</h3>
+            </div>
+            <div style="width: 1056px; height: 400px;" align="left">
+                <h5>
+                    A lab starts with a title page, a lab goal explaining what you're achieving and an overview
+                    architectural diagram highlighting in <i style="color: red;">RED</i> the component being worked
+                    on. The rest of the lab focuses on guiding through the steps to achieve the presented goal.
+                    <br><br>
+                    Each lab will finish up with the state you should be seeing, a page of contact information for
+                    eventual questions and a link to the next lab.
+                    <br><br>
+                    Now it's time to get to work...
+                </h5>
+            </div>
+        </section>
+        <section>
+            <h2>LET'S GET STARTED...</h2>
+            <h3><a href="lab01-ocp36.html" style="color: midnightblue" target="_blank">Lab 1 - Install OpenShift Container Platform</a></h3>
+        </section>
+    </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+
+<script>
+
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+            { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+    });
+
+</script>
+
+</body>
+</html>
