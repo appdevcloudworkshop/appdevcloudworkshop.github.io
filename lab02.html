@@ -52,8 +52,7 @@
         <section>
             <div style="width: 1056px; height: 130px;">
                 <h2>Lab Goal</h2>
-                <h4>To install JBoss EAP, JBoss BRMS and travel discount rules project in container deployed
-                on OpenShift Container Platform.</h4>
+                <h4>Install JBoss EAP, JBoss BRMS and travel discount rules project in container deployment.</h4>
             </div>
             <div style="width: 1056px; height: 600px;">
                 <img src="images/destinasia-workshop/image01.png">
@@ -99,10 +98,11 @@
             </div>
             <div style="width: 1056px; height: 500px;">
                 <ul>
-                    <li>Run init.sh or init.bat (Windows admin privileges) with IP of target OpenShift Container Platform:</li>
+                    <li>Run init.sh, init.bat or init-win10.bat (Windows admin privileges) with IP of
+                        target OpenShift Container Platform:</li>
                     <br>
                     <ul>
-                        <li><p style="font-size: 24px; color: darkred"><code>$ ./init.{sh|bat} 192.168.99.100</code></p></li>
+                        <li><p style="font-size: 24px; color: darkred"><code>$ ./init{-win10}.{sh|bat} 192.168.64.10</code></p></li>
                     </ul>
                     <br>
                     <li>The IP used here is address OpenShift Container Platform</li>
@@ -117,7 +117,7 @@
                 <h5>Checks first, then setup...</h5>
             </div>
             <div style="width: 1056px; height: 600px;">
-                <img src="images/destinasia-workshop/image16.png">
+                <img src="images/destinasia-workshop/image16-1.png">
             </div>
         </section>
 
@@ -127,7 +127,7 @@
                 <h5>Log in to view AppDev in Cloud...</h5>
             </div>
             <div style="width: 1056px; height: 600px;">
-                <img src="images/destinasia-workshop/image17.png">
+                <img src="images/destinasia-workshop/image17-1.png">
             </div>
         </section>
 
@@ -137,7 +137,7 @@
                 <h5>Takes some time...</h5>
             </div>
             <div style="width: 1056px; height: 600px;">
-                <img src="images/destinasia-workshop/image18.png">
+                <img src="images/destinasia-workshop/image18-1.png">
             </div>
         </section>
 
@@ -147,7 +147,7 @@
                 <h5>Click on Monitoring, open destinasia-rules-demo build...</h5>
             </div>
             <div style="width: 1056px; height: 600px;">
-                <img src="images/destinasia-workshop/image19.png">
+                <img src="images/destinasia-workshop/image19-1.png">
             </div>
         </section>
 
@@ -157,7 +157,7 @@
                 <h5>Console shows same build log as in OCP console...</h5>
             </div>
             <div style="width: 1056px; height: 600px;">
-                <img src="images/destinasia-workshop/image20.png">
+                <img src="images/destinasia-workshop/image20-1.png">
             </div>
         </section>
 
@@ -167,7 +167,7 @@
                 <h5>After build & deployment, note log in URL ...</h5>
             </div>
             <div style="width: 1056px; height: 600px;">
-                <img src="images/destinasia-workshop/image21.png">
+                <img src="images/destinasia-workshop/image21-1.png">
             </div>
         </section>
 
@@ -176,7 +176,7 @@
                 <h2>VIEW OCP PROJECT</h2>
             </div>
             <div style="width: 1056px; height: 600px;">
-                <img src="images/destinasia-workshop/image22.png">
+                <img src="images/destinasia-workshop/image22-1.png">
             </div>
         </section>
 
@@ -186,7 +186,7 @@
                 <h5>Your IP address may differ, see console output</h5>
             </div>
             <div style="width: 1056px; height: 220px;" align="left">
-                <p style="font-size: 30px; color: darkred">http://destinasia-rules-demo-appdev-in-cloud.192.168.99.100.nip.io/business-central</p>
+                <p style="font-size: 30px; color: darkred">http://destinasia-rules-demo-appdev-in-cloud.192.168.64.10.nip.io/business-central</p>
                 <ul>
                     <li><p style="font-size: 24px">user: <code style="color: darkred">erics</code></p></li>
                     <li><p style="font-size: 24px">password: <code style="color: darkred">jbossbrms1!</code></p></li>
@@ -200,7 +200,7 @@
                     $ sudo vi /etc/hosts
                     <br><br>
                     # add host for OCP demo resolution<br>
-                    192.168.99.100   http://destinasia-rules-demo-appdev-in-cloud.192.168.99.100.nip.io
+                    192.168.64.10   http://destinasia-rules-demo-appdev-in-cloud.192.168.64.10.nip.io
                 </code>
                 </p>
             </div>
@@ -219,7 +219,7 @@
                 <h2>END LAB 2</h2>
             </div>
             <div style="width: 1056px; height: 500px;">
-                <img style="border: 2px solid black" src="images/destinasia-workshop/image25.png">
+                <img style="border: 2px solid black" src="images/destinasia-workshop/image25-1.png">
             </div>
         </section>
 
