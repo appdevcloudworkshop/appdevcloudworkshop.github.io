@@ -92,7 +92,8 @@
             </div>
             <div style="width: 100%; height: 200px; text-align: left">
                 <ol>
-                    <li>Checks for Xhyvm, KVM or VirtualBox installed</li>
+                    <li>Checks for KVM or VirtualBox installed</li>
+                    <li>Checks for docker-machine tooling installed</li>
                     <li>Checks for oc client tool installed</li>
                     <li>Checks for version validations of above</li>
                 </ol>
@@ -139,34 +140,10 @@
         <section>
             <div style="width: 1056px; height: 150px;">
                 <h2>REQUIREMENTS</h2>
-                <h4>INSTALL XHYVE (OSX)</h4>
-            </div>
-            <div style="width: 1056px; height: 200px;" align="left">
-                OSX users need to install Xhyve.
-                <br><br>
-                <b>During OCP install, possible error:</b>
-                <br>
-                <ul>
-                    <li><p style="font-size: 24px; color: darkred"><code>"OSX driver xhyve is required but not installed yet...
-                        use 'brew install xhyve' to install"</code></p></li>
-                </ul>
-                <br><br>
-                <b>Fix:</b>
-                <br>
-                <ul>
-                    <li>Install xhyve via Brew tooling: 'brew install xhyve'</li>
-                </ul>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <div style="width: 1056px; height: 150px;">
-                <h2>REQUIREMENTS</h2>
                 <h4>INSTALL VIRTUALBOX</h4>
             </div>
             <div style="width: 1056px; height: 200px;" align="left">
-                Windows users need to install Virtual Box.
+                Windows & OSX users need to install Virtual Box.
                 <br><br>
                 <b>During OCP install, possible error:</b>
                 <br>
@@ -180,6 +157,31 @@
                 <br>
                 <ul>
                     <li>Download and install VirtualBox as indicated.</li>
+                </ul>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <div style="width: 1056px; height: 150px;">
+                <h2>REQUIREMENTS</h2>
+                <h4>INSTALL DOCKER-MACHINE</h4>
+            </div>
+            <div style="width: 1056px; height: 200px;" align="left">
+                All users need docker-machine tooling installed.
+                <br><br>
+                <b>During OCP install, possible error:</b>
+                <br>
+                <ul>
+                    <li><p style="font-size: 24px; color: darkred"><code>"Docker-machine is required but not installed yet... instructions
+                        here: <a href=https://docs.docker.com/machine/install-machine/#install-machine-directly"
+                        style="color: midnightblue" target="_blank">https://docs.docker.com/machine/install-machine/#install-machine-directly</a></code></p></li>
+                </ul>
+                <br><br>
+                <b>Fix:</b>
+                <br>
+                <ul>
+                    <li>Install docker-machine as indicated.</li>
                 </ul>
                 </ul>
             </div>
@@ -322,7 +324,7 @@
                 <h5>Your IP address may differ, see console output</h5>
             </div>
             <div style="width: 1056px; height: 300px;">
-                <code>https://192.168.64.10:8443</code>
+                <code>https://192.168.99.100:8443</code>
                 <br><br>
                 <ul>
                     <li><p style="font-size: 24px;" >user: <code style="color: darkred">openshift-dev</code></p></li>
